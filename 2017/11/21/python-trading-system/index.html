@@ -256,7 +256,7 @@
 그리고 다시 <code>pytrader.py</code> 파일을 실행해 보면 로그인 창이 화면에 나타나지 않고 바로 로그인이 수행된 후 <code>PyTrader</code> 프로그램이 실행 됨.</p>
 <h2 id="정리"><a class="header-anchor" href="#정리">¶</a>정리</h2>
 <ol>
-<li>윈도우 작업 스케쥴러를 이용해 매일 08:00에 키움 번개 자동 로그인 스크립트(<a href="http://test.py" target="_blank" rel="external">test.py</a>)를 실행.</li>
+<li>윈도우 작업 스케쥴러를 이용해 매일 08:00에 키움 번개 자동 로그인 스크립트(<code>login.py</code>)를 실행.</li>
 <li>해당 스크립트가 실행되면 키움 번개에 로그인되면 버전 처리 완료.</li>
 <li>키움 번개 HTS 자동 종료.</li>
 <li>08:15 윈도우 작업 스케쥴러를 이용해 <code>pytrader.py</code> 파일을 실행.</li>
@@ -267,6 +267,11 @@
 <p><code>PyTrader</code> 개발과 관련해서 <code>키움 OpenAPI+</code> 관련 코드는 모두 <code>Kiwoom.py</code>에 구현.<br>
 UI는 <code>Qt Designer</code>를 사용해 <code>pytrader.ui</code> 파일에 구현.<br>
 <code>pytrader.py</code>에는 이벤트 처리하는 코드만 구현.</p>
+<blockquote><h4 id="에러사항"><a class="header-anchor" href="#에러사항">¶</a>에러사항</h4>
+<p><code>KOA Studio</code>에서 모의투자 체크 박스가 정상적으로 안되는 경우 발생.<br>
+일단 모의 투자로 접속하고 <code>계좌비밀번호 저장</code>에서 <code>AUTO</code> 체크박스 해제로 일반 투자로 접속 가능.<br>
+모의투자는 <code>최대 3개월</code>만 사용가능하여 기간 종료 시에는 모의 투자로 접속이 안되어 다시 모의 투자 가입하여야 함.</p>
+</blockquote>
 <h2 id="개발-2일차"><a class="header-anchor" href="#개발-2일차">¶</a>개발 2일차</h2>
 <p>주문 기능 추가.</p>
 <h3 id="1-ui-구성"><a class="header-anchor" href="#1-ui-구성">¶</a>1) UI 구성</h3>
@@ -298,7 +303,7 @@ UI는 <code>Qt Designer</code>를 사용해 <code>pytrader.ui</code> 파일에 �
 <img src="/2017/11/21/python-trading-system/JumunAPI_workflow.png">
 <p>Kiwoom 클래스에 <code>send_order</code> 메서드를 추가</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">send_order</span><span class="params">(self, rqname, screen_no, acc_no, order_type, code, quantity, price, hoga, order_no)</span>:</span></span><br><span class="line">    self.dynamicCall(<span class="string">"SendOrder(QString, QString, QString, int, QString, int, int, QString, QString)"</span>,</span><br><span class="line">                     [rqname, screen_no, acc_no, order_type, code, quantity, price, hoga, order_no])</span><br></pre></td></tr></table></figure>
-<p>체결잔고 데이터를 가져오는 메서드인 <code>GetChejanData</code>를 사용하는 <code>get_chejan_data</code> 메서드를 Kiwoom 클래스에 추가.</p>
+<p>체결잔고 데이터를 가져오는 메서드인 <a href="../kiwoom-method/#GetChenjanData">GetChejanData</a>를 사용하는 <code>get_chejan_data</code> 메서드를 Kiwoom 클래스에 추가.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_chejan_data</span><span class="params">(self, fid)</span>:</span></span><br><span class="line">    ret = self.dynamicCall(<span class="string">"GetChejanData(int)"</span>, fid)</span><br><span class="line">    <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure>
 <p>주문체결 시점에서 키움증권 서버가 발생시키는 <code>OnReceiveChejanData</code> 이벤트를 처리하는 메서드를 구현.<br>
 먼저 <code>_set_signal_slots</code> 메서드에 시그널과 슬롯을 연결하는 코드 추가.</p>

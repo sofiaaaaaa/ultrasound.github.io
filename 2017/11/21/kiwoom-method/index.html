@@ -197,7 +197,7 @@
 어떤 <code>TR</code> 요청에 의해 <code>OnReceiveTrData</code> 이벤트가 발생했는지를 확인하기 위해 먼저 사용자 <code>Request 명(rqname)</code>을 확인.<br>
 앞서 <code>CommRqData</code>를 통해 서버에 <code>TR</code>을 송신 할 때 <code>Request</code> 명으로 <code>opt10001_req</code>을 설정했으므로 <code>receive_trdata</code> 메서드에서는 <code>rqname</code> 값이 <code>opt10001_req</code>인지 확인.</p>
 <h2 id="getlogininfo"><a class="header-anchor" href="#getlogininfo">¶</a>GetLoginInfo</h2>
-
+<img src="/2017/11/21/kiwoom-method/GetLoginInfo.png">
 <p>계좌 개수, 계좌 번호, 사용자 ID, 사용자명등의 정보를 얻어올 수 있음.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">account_num = self.kiwoom.dynamicCall(<span class="string">"GetLoginInfo(QString)"</span>, [<span class="string">"ACCNO"</span>])</span><br></pre></td></tr></table></figure>
 <h2 id="getcodelistbymarket"><a class="header-anchor" href="#getcodelistbymarket">¶</a>GetCodeListByMarket</h2>
@@ -215,6 +215,66 @@
 다만, 증권사 서버에 주문 요청을 했다고 해서 즉시 체결되는 것이 아니므로 이벤트 루프를 사용해 대기하고 있어야 함.<br>
 총 9개의 인자를 받음</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">send_order</span><span class="params">(self, rqname, screen_no, acc_no, order_type, code, quantity, price, hoga, order_no)</span>:</span></span><br><span class="line">    self.dynamicCall(<span class="string">"SendOrder(QString, QString, QString, int, QString, int, int, QString, QString)"</span>,</span><br><span class="line">                     [rqname, screen_no, acc_no, order_type, code, quantity, price, hoga, order_no])</span><br></pre></td></tr></table></figure>
+<h2 id="getchejandata"><a class="header-anchor" href="#getchejandata">¶</a>GetChejanData</h2>
+
+<p>체결잔고 데이터를 반환.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_chejan_data</span><span class="params">(self, fid)</span>:</span></span><br><span class="line">    ret = self.dynamicCall(<span class="string">"GetChejanData(int)"</span>, fid)</span><br><span class="line">    <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure>
+<p><code>get_chejan_data</code> 메서드는 함수 인자인 <code>FID</code> 값을 통해 서로 다른 데이터를 얻을 수 있음.<br>
+더 자세한 <code>FID</code> 정보는 개발 가이드 <code>8.19절</code>을 참조.</p>
+<table>
+<thead>
+<tr>
+<th>FID</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9203</td>
+<td>주문번호</td>
+</tr>
+<tr>
+<td>302</td>
+<td>종목명</td>
+</tr>
+<tr>
+<td>900</td>
+<td>주문수량</td>
+</tr>
+<tr>
+<td>901</td>
+<td>주문가격</td>
+</tr>
+<tr>
+<td>902</td>
+<td>미체결수량</td>
+</tr>
+<tr>
+<td>904</td>
+<td>원주문번호</td>
+</tr>
+<tr>
+<td>905</td>
+<td>주문구분</td>
+</tr>
+<tr>
+<td>908</td>
+<td>주문/체결시간</td>
+</tr>
+<tr>
+<td>909</td>
+<td>체결번호</td>
+</tr>
+<tr>
+<td>911</td>
+<td>체결량</td>
+</tr>
+<tr>
+<td>10</td>
+<td>현재가, 체결가, 실시간 종가</td>
+</tr>
+</tbody>
+</table>
 <h2 id="link"><a class="header-anchor" href="#link">¶</a>Link</h2>
 <p><a href="https://wikidocs.net/book/110" target="_blank" rel="external">파이썬으로 배우는 알고리즘 트레이딩</a></p>
 
