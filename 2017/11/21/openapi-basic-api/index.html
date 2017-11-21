@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>OpenAPI+ basic API | Just Fucking Do It!!!</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="kiwoom,API" />
+    
+    <meta name="description" content="¶Open API+ 로그인하기 파이썬에서 OpenAPI+를 사용하려면 PyQt를 사용하는 것이 가장 편리한 방법. 전체코드1234567891011121314151617181920212223242526272829303132333435import sysfrom PyQt5.QtWidgets import *from PyQt5.QtGui import *from Py">
+<meta name="keywords" content="kiwoom,API">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenAPI+ basic API">
+<meta property="og:url" content="https://ultrasound.github.io/2017/11/21/openapi-basic-api/index.html">
+<meta property="og:site_name" content="Just Fucking Do It!!!">
+<meta property="og:description" content="¶Open API+ 로그인하기 파이썬에서 OpenAPI+를 사용하려면 PyQt를 사용하는 것이 가장 편리한 방법. 전체코드1234567891011121314151617181920212223242526272829303132333435import sysfrom PyQt5.QtWidgets import *from PyQt5.QtGui import *from Py">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://wikidocs.net/images/page/4240/r12.29.png">
+<meta property="og:updated_time" content="2017-11-13T00:49:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OpenAPI+ basic API">
+<meta name="twitter:description" content="¶Open API+ 로그인하기 파이썬에서 OpenAPI+를 사용하려면 PyQt를 사용하는 것이 가장 편리한 방법. 전체코드1234567891011121314151617181920212223242526272829303132333435import sysfrom PyQt5.QtWidgets import *from PyQt5.QtGui import *from Py">
+<meta name="twitter:image" content="https://wikidocs.net/images/page/4240/r12.29.png">
+    
+
+    
+        <link rel="alternate" href="/" title="Just Fucking Do It!!!" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="../../../../libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="../../../../libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="../../../../css/style.css">
+
+    <script src="../../../../libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="../../../../libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="../../../../libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="../../../../index.html" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="../../../../index.html">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="../../../../about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '../../../../content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="../../../../js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-openapi-basic-api" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        OpenAPI+ basic API
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="" class="article-date">
+            <time datetime="2017-11-21T06:30:53.508Z" itemprop="datePublished">2017-11-21</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="../../../../tags/api/">API</a>, <a class="tag-link" href="../../../../tags/kiwoom/">kiwoom</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="open-api-로그인하기"><a class="header-anchor" href="#open-api-로그인하기">¶</a>Open API+ 로그인하기</h2>
+<p>파이썬에서 <code>OpenAPI+</code>를 사용하려면 <code>PyQt</code>를 사용하는 것이 가장 편리한 방법.</p>
+<figure class="highlight python"><figcaption><span>전체코드</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QAxContainer <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        self.setWindowTitle(<span class="string">"PyStock"</span>)</span><br><span class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">150</span>)</span><br><span class="line"></span><br><span class="line">        self.kiwoom = QAxWidget(<span class="string">"KHOPENAPI.KHOpenAPICtrl.1"</span>)</span><br><span class="line"></span><br><span class="line">        btn1 = QPushButton(<span class="string">"Login"</span>, self)</span><br><span class="line">        btn1.move(<span class="number">20</span>, <span class="number">20</span>)</span><br><span class="line">        btn1.clicked.connect(self.btn1_clicked)</span><br><span class="line"></span><br><span class="line">        btn2 = QPushButton(<span class="string">"Check state"</span>, self)</span><br><span class="line">        btn2.move(<span class="number">20</span>, <span class="number">70</span>)</span><br><span class="line">        btn2.clicked.connect(self.btn2_clicked)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">btn1_clicked</span><span class="params">(self)</span>:</span></span><br><span class="line">        ret = self.kiwoom.dynamicCall(<span class="string">"CommConnect()"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">btn2_clicked</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.kiwoom.dynamicCall(<span class="string">"GetConnectState()"</span>) == <span class="number">0</span>:</span><br><span class="line">            self.statusBar().showMessage(<span class="string">"Not connected"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.statusBar().showMessage(<span class="string">"Connected"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    myWindow = MyWindow()</span><br><span class="line">    myWindow.show()</span><br><span class="line">    app.exec_()</span><br></pre></td></tr></table></figure>
+<p>파이썬에서 키움증권의 클래스를 사용하려면 <code>PyQt</code>의 <code>QAxWidget</code> 클래스를 사용하여 인스턴스를 생성해야 함.<br>
+키움증권이 제공하는 클래스는 각각 고유의 <code>CLSID</code> 또는 <code>ProgID</code>를 가지는데 해당 값을 <code>QAxWidget</code> 클래스의 생성자로 넘겨주면 인스턴스가 생성됨.</p>
+<p>키움증권의 개발 가이드를 참조하면 <code>CLSID</code>는 <code>{A1574A0D-6BFA-4BD7-9020-DED88711818D}</code> 임을 알 수 있고, 이를 윈도우 레지스트리 편집기를 통해 검색하면<br>
+<code>ProgID</code>는 아래와 같이 `‘KHOPENAPI.KHOpenAPICtrl.1’ 임을 알 수 있음.</p>
+<p><img src="https://wikidocs.net/images/page/4240/r12.29.png" alt="키움증권 OpenAPI+ ProgID"></p>
+<p><code>CLSID</code>는 10진수로 구성되어 있어 조금 복작하기 때문에 파이썬에서 증권사 API가 제공하는 클래스의 인스턴스를 생성할 때는 보통 문자열로 된 <code>ProgID</code>를 사용하는 것이 편리.</p>
+<p>키움증권이 제공하는 클래스를 사용하기 위해 <code>ProgID</code>를 <code>QAxWidget</code> 클래스의 생성자로 전달하여 인스턴스를 생성.</p>
+<figure class="highlight python"><figcaption><span>키움이 제공하는 클래스 사용</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 코드 생략</span></span><br><span class="line">        self.kiwoom = QAxWidget(<span class="string">"KHOPENAPI.KHOpenAPICtrl.1"</span>)</span><br></pre></td></tr></table></figure>
+<p><code>self.kiwoom</code>은 <code>QAxWidget</code> 클래스의 인스턴스인데 <code>QAxWidget</code> 클래스는 아래와 같이 <code>QWidget</code>과 <code>QAxBase</code>라는 클래스를 상속 받음.</p>
+<p><img src="https://wikidocs.net/images/page/4240/r12.30.png" alt="QAxWidget Class 상속 구조"></p>
+<p><code>OpenAPI+</code>는 로그인 윈도우를 실행하는 <a href="../kiwoom-method/#commconnect">CommConnect</a> 메서드를 제공.<br>
+즉, 인스턴스를 통해 <code>CommConnect</code> 메서드를 호출하기만 하면 로그인을 위한 윈도우가 자동으로 실행됨.<br>
+키움증권의 <code>OpenAPI+</code>는 <code>OCX</code> 방식으로 개발되었기 때문에 파이썬에서 메서드를 호출하는 방식도 <code>COM</code> 방식과는 다름.</p>
+<p><code>COM</code> 방식에서는 인스턴스를 통해 메서드를 호출했던 것과 달리 <code>OCX</code> 방식에서는 <code>QAxBase</code> 클래스의 <code>dynamicCall</code> 메서드를 사용하여 원하는 메서드를 호출할 수 있음.</p>
+<p>정리해보면 <code>OpenAPI+</code>가 제공하는 메서드를 사용하기 위해서는 <code>self.kiwoom</code> 객체를 통해 <code>dynamicCall</code> 메서드를 호출해야 함.<br>
+이때 <code>dynamicCall</code> 메서드의 인자로 호출하려는 메서드를 넘겨줌.</p>
+<figure class="highlight python"><figcaption><span>call CommConnect</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.kiwoom.dynamicCall(<span class="string">"CommConnect()"</span>)</span><br></pre></td></tr></table></figure>
+<p>서버 접속 상태를 확인 하기 위해 <a href="../kiwoom-method/#GetConnectState">GetConnectState</a> 메서드를 호출한 후 메서드의 리턴 값을 확인.</p>
+<h2 id="로그인-이벤트-처리하기"><a class="header-anchor" href="#로그인-이벤트-처리하기">¶</a>로그인 이벤트 처리하기</h2>
+<p><code>OpenAPI+</code>의 <code>CommConnect</code> 메서드를 통해 키움증권 서버에 로그인을 시도하면 키움증권 서버는 아래와 같이<br>
+<code>OnEventConnect</code>라는 이벤트를 발생.<br>
+따라서 프로그램이 <a href="../kiwoom-method/#OnEventConnect">OnEventConnect</a> 이벤트를 처리한다면 <code>GetConnectState</code> 메서드를 사용하지 않고도 로그인 상태 확인 가능.</p>
+<p><img src="https://wikidocs.net/images/page/4241/r12.33.png" alt="OnEventConnect 이벤트 발생"></p>
+<figure class="highlight python"><figcaption><span>이벤트 처리를 통한 로그인 여부 확인</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QAxContainer <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        self.setWindowTitle(<span class="string">"PyStock"</span>)</span><br><span class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">150</span>)</span><br><span class="line"></span><br><span class="line">        self.kiwoom = QAxWidget(<span class="string">"KHOPENAPI.KHOpenAPICtrl.1"</span>)</span><br><span class="line">        self.kiwoom.dynamicCall(<span class="string">"CommConnect()"</span>)</span><br><span class="line"></span><br><span class="line">        self.text_edit = QTextEdit(self)</span><br><span class="line">        self.text_edit.setGeometry(<span class="number">10</span>, <span class="number">60</span>, <span class="number">280</span>, <span class="number">80</span>)</span><br><span class="line">        self.text_edit.setEnabled(<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line">        self.kiwoom.OnEventConnect.connect(self.event_connect)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">event_connect</span><span class="params">(self, err_code)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> err_code == <span class="number">0</span>:</span><br><span class="line">            self.text_edit.append(<span class="string">"로그인 성공"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    myWindow = MyWindow()</span><br><span class="line">    myWindow.show()</span><br><span class="line">    app.exec_()</span><br></pre></td></tr></table></figure>
+<p><code>OpenAPI+</code>는 통신 연결 상태가 변경될 때 <code>OnEventConnect</code>라는 이벤트가 발생.<br>
+발생된 <code>OnEventConnect</code> 이벤트를 처리하기 위해 <code>MyWindow</code> 클래스에 <code>event_connect</code>라는 이름의 메서드를 구현하고<br>
+이벤트와 이벤트 처리 메서드를 연결 시키면 이벤트(<code>OnEventConnect</code>) 발생 시 자동으로 이벤트 처리 메서드 (<code>self.event_connect</code>)가 호출 됨.</p>
+<p><img src="https://wikidocs.net/images/page/4241/r12.35.png" alt="변수와 객체의 바인딩"></p>
+<p><code>event_connect</code> 메서드는 메서드의 인자로 넘어오는 <code>err_code</code> 값을 확인.<br>
+<code>QTextEdit</code> 객체에 문자열을 추가하기 위해 <code>append</code>라는 메서드를 사용.<br>
+참고로 이 <code>append</code>는 파이썬 리스트의 <code>append</code> 메서드와 전혀 관련 없음.</p>
+<p>이벤트와 이벤트 처리 메서드의 연결은 <code>connect</code> 메서드를 사용.</p>
+<h2 id="기본-정보-요청하기"><a class="header-anchor" href="#기본-정보-요청하기">¶</a>기본 정보 요청하기</h2>
+<p><code>TR(Transaction)</code> - <code>서버로 부터 데이터를 주고받는 행위</code></p>
+<p>아래 그림은 <code>KOA Studio</code>를 통해 확인한 <code>OpenAPI+</code>의 TR 목록</p>
+<p>각 <code>TR</code>의 기능을 살펴보고 원하는 기능을 제공하는 <code>TR</code>을 사용하여 데이터를 서버에 요청한 후 전송된 값을 받으면 됨.</p>
+<p><img src="https://wikidocs.net/images/page/4242/r12.37.png" alt="OpenAPI+ TR 목록"></p>
+<p>아래는 <code>opt1001</code> <code>TR</code>를 사용하여 주식 종목의 기본적인 정보를 얻어오는 프로그램의 모습</p>
+<p><img src="https://wikidocs.net/images/page/4242/r12.38.png" alt="기본 정보 요청 프로그램"></p>
+<p><code>PyQt</code>를 사용하여 UI를 구성하는 코드 구현</p>
+<p>사용된 <code>PyQt</code> 위젯 리스트</p>
+<table>
+<thead>
+<tr>
+<th>클래스</th>
+<th>용도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QLabel</td>
+<td>간단한 텍스트 나 이미지 출력(‘종목코드:’ 출력)</td>
+</tr>
+<tr>
+<td>QLineEdit</td>
+<td>간단한 사용자 입력 처리</td>
+</tr>
+<tr>
+<td>QPushButton</td>
+<td>버튼 생성(‘조회’ 버튼 생성)</td>
+</tr>
+<tr>
+<td>QTextEdit</td>
+<td>메시지 출력 (실행결과 메시지)</td>
+</tr>
+</tbody>
+</table>
+<p><code>QLabel</code>은 텍스트나 이미지를 출력하는 데 사용. 만약 텍스트를 출력한다면 생성자의 첫 번째 인자로 출력될 문자열을 넘겨주면 됨.<br>
+두 번째 인자에는 부모 위젯을 지정. 아래 전체 코드에서 <code>QLable</code>은 <code>QMainWindow</code>안에 위치하므로 부모 위젯으로 <code>self</code>를 지정.<br>
+<code>label = QLabel('종목코드: ', self)</code></p>
+<figure class="highlight python"><figcaption><span>UI 구성 코드</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span>  *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QAxContainer <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        self.setWindowTitle(<span class="string">"PyStock"</span>)</span><br><span class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">150</span>)</span><br><span class="line"></span><br><span class="line">        label = QLabel(<span class="string">'종목코드: '</span>, self)</span><br><span class="line">        label.move(<span class="number">20</span>, <span class="number">20</span>)</span><br><span class="line"></span><br><span class="line">        self.code_edit = QLineEdit(self)</span><br><span class="line">        self.code_edit.move(<span class="number">80</span>, <span class="number">20</span>)</span><br><span class="line">        self.code_edit.setText(<span class="string">"039490"</span>)</span><br><span class="line"></span><br><span class="line">        btn1 = QPushButton(<span class="string">"조회"</span>, self)</span><br><span class="line">        btn1.move(<span class="number">190</span>, <span class="number">20</span>)</span><br><span class="line"></span><br><span class="line">        self.text_edit = QTextEdit(self)</span><br><span class="line">        self.text_edit.setGeometry(<span class="number">10</span>, <span class="number">60</span>, <span class="number">280</span>, <span class="number">80</span>)</span><br><span class="line">        self.text_edit.setEnabled(<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    myWindow = MyWindow()</span><br><span class="line">    myWindow.show()</span><br><span class="line">    app.exec_()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span>  *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QAxContainer <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Kiwoom Login</span></span><br><span class="line">        self.kiwoom = QAxWidget(<span class="string">"KHOPENAPI.KHOpenAPICtrl.1"</span>)</span><br><span class="line">        self.kiwoom.dynamicCall(<span class="string">"CommConnect()"</span>)</span><br><span class="line">        self.kiwoom.OnEventConnect.connect(self.event_connect)</span><br><span class="line"></span><br><span class="line">        self.setWindowTitle(<span class="string">"PyStock"</span>)</span><br><span class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">150</span>)</span><br><span class="line"></span><br><span class="line">        label = QLabel(<span class="string">'종목코드: '</span>, self)</span><br><span class="line">        label.move(<span class="number">20</span>, <span class="number">20</span>)</span><br><span class="line"></span><br><span class="line">        self.code_edit = QLineEdit(self)</span><br><span class="line">        self.code_edit.move(<span class="number">80</span>, <span class="number">20</span>)</span><br><span class="line">        self.code_edit.setText(<span class="string">"039490"</span>)</span><br><span class="line"></span><br><span class="line">        btn1 = QPushButton(<span class="string">"조회"</span>, self)</span><br><span class="line">        btn1.move(<span class="number">190</span>, <span class="number">20</span>)</span><br><span class="line">        btn1.clicked.connect(self.btn1_clicked)</span><br><span class="line"></span><br><span class="line">        self.text_edit = QTextEdit(self)</span><br><span class="line">        self.text_edit.setGeometry(<span class="number">10</span>, <span class="number">60</span>, <span class="number">280</span>, <span class="number">80</span>)</span><br><span class="line">        self.text_edit.setEnabled(<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">event_connect</span><span class="params">(self, err_code)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> err_code == <span class="number">0</span>:</span><br><span class="line">            self.text_edit.append(<span class="string">"로그인 성공"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">btn1_clicked</span><span class="params">(self)</span>:</span></span><br><span class="line">        code = self.code_edit.text()</span><br><span class="line">        self.text_edit.append(<span class="string">"종목코드: "</span> + code)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    myWindow = MyWindow()</span><br><span class="line">    myWindow.show()</span><br><span class="line">    app.exec_()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><figcaption><span>opt10001 TR를 통해 기본 정보를 요청하는 코드</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span>  *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QAxContainer <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Kiwoom Login</span></span><br><span class="line">        self.kiwoom = QAxWidget(<span class="string">"KHOPENAPI.KHOpenAPICtrl.1"</span>)</span><br><span class="line">        self.kiwoom.dynamicCall(<span class="string">"CommConnect()"</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># OpenAPI+ Event</span></span><br><span class="line">        self.kiwoom.OnEventConnect.connect(self.event_connect)</span><br><span class="line">        self.kiwoom.OnReceiveTrData.connect(self.receive_trdata)</span><br><span class="line"></span><br><span class="line">        self.setWindowTitle(<span class="string">"PyStock"</span>)</span><br><span class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">150</span>)</span><br><span class="line"></span><br><span class="line">        label = QLabel(<span class="string">'종목코드: '</span>, self)</span><br><span class="line">        label.move(<span class="number">20</span>, <span class="number">20</span>)</span><br><span class="line"></span><br><span class="line">        self.code_edit = QLineEdit(self)</span><br><span class="line">        self.code_edit.move(<span class="number">80</span>, <span class="number">20</span>)</span><br><span class="line">        self.code_edit.setText(<span class="string">"039490"</span>)</span><br><span class="line"></span><br><span class="line">        btn1 = QPushButton(<span class="string">"조회"</span>, self)</span><br><span class="line">        btn1.move(<span class="number">190</span>, <span class="number">20</span>)</span><br><span class="line">        btn1.clicked.connect(self.btn1_clicked)</span><br><span class="line"></span><br><span class="line">        self.text_edit = QTextEdit(self)</span><br><span class="line">        self.text_edit.setGeometry(<span class="number">10</span>, <span class="number">60</span>, <span class="number">280</span>, <span class="number">80</span>)</span><br><span class="line">        self.text_edit.setEnabled(<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">event_connect</span><span class="params">(self, err_code)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> err_code == <span class="number">0</span>:</span><br><span class="line">            self.text_edit.append(<span class="string">"로그인 성공"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">btn1_clicked</span><span class="params">(self)</span>:</span></span><br><span class="line">        code = self.code_edit.text()</span><br><span class="line">        self.text_edit.append(<span class="string">"종목코드: "</span> + code)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># SetInputValue</span></span><br><span class="line">        self.kiwoom.dynamicCall(<span class="string">"SetInputValue(QString, QString)"</span>, <span class="string">"종목코드"</span>, code)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># CommRqData</span></span><br><span class="line">        self.kiwoom.dynamicCall(<span class="string">"CommRqData(QString, QString, int, QString)"</span>, <span class="string">"opt10001_req"</span>, <span class="string">"opt10001"</span>, <span class="number">0</span>, <span class="string">"0101"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">receive_trdata</span><span class="params">(self, screen_no, rqname, trcode, recordname, prev_next, data_len, err_code, msg1, msg2)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> rqname == <span class="string">"opt10001_req"</span>:</span><br><span class="line">            name = self.kiwoom.dynamicCall(<span class="string">"CommGetData(QString, QString, QString, int, QString)"</span>, trcode, <span class="string">""</span>, rqname, <span class="number">0</span>, <span class="string">"종목명"</span>)</span><br><span class="line">            volume = self.kiwoom.dynamicCall(<span class="string">"CommGetData(QString, QString, QString, int, QString)"</span>, trcode, <span class="string">""</span>, rqname, <span class="number">0</span>, <span class="string">"거래량"</span>)</span><br><span class="line"></span><br><span class="line">            self.text_edit.append(<span class="string">"종목명: "</span> + name.strip())</span><br><span class="line">            self.text_edit.append(<span class="string">"거래량: "</span> + volume.strip())</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    myWindow = MyWindow()</span><br><span class="line">    myWindow.show()</span><br><span class="line">    app.exec_()</span><br></pre></td></tr></table></figure>
+<p><img src="https://wikidocs.net/images/page/4242/r12.39.png" alt="OpenAPI+의 TR 처리 순서"></p>
+<ol>
+<li><code>SetInputValue</code> 메서드를 사용하여 <code>TR</code> 입력 값을 설정.</li>
+<li><code>CommRqData</code> 메서드를 사용하여 <code>TR</code>을 서버로 송신.</li>
+<li>서버로부터 이벤트가 발생할 때까지 이벤트 루프를 사용하여 대기.</li>
+<li><code>CommGetData</code> 메서드를 사용하여 수신 데이터를 가져옴.</li>
+</ol>
+<p>C++ 코드에서는 먼저 <code>SetInputValue</code> 메서드를 호출하여 <code>종목코드</code>라는 문자열과 실제 종목 코드 값(예: 039490)을 입력.<br>
+그다음 <code>CommRqData</code> 메서드를 호출하여 <code>TR</code>를 서버에 전송</p>
+<p><img src="https://wikidocs.net/images/page/4242/r12.40.png" alt="opt10001 TR C++ 샘플코드"></p>
+<p>파이썬 코드에서는 아래와 같이 구현.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">btn1_clicked</span><span class="params">(self)</span>:</span></span><br><span class="line">    code = self.code_edit.text()</span><br><span class="line">    self.text_edit.append(<span class="string">"종목코드: "</span> + code)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># SetInputValue</span></span><br><span class="line">    self.kiwoom.dynamicCall(<span class="string">"SetInputValue(QString, QString)"</span>, <span class="string">"종목코드"</span>, code)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># CommRqData</span></span><br><span class="line">    self.kiwoom.dynamicCall(<span class="string">"CommRqData(QString, QString, int, QString)"</span>, <span class="string">"opt10001_req"</span>, <span class="string">"opt10001"</span>, <span class="number">0</span>, <span class="string">"0101"</span>)</span><br></pre></td></tr></table></figure>
+<p><code>QLineEdit</code> 위젯을 통해 입력받은 종목 코드를 'SetInputValue` 메서드의 두 번째 인자로 넘겨주는 것을 확인.</p>
+<p><code>TR</code> 구성이 완료됐다면 <code>CommRqData</code> 메서드를 사용하여 <code>TR</code>을 서버로 송신.<br>
+<code>CommRqData</code>의 첫 번째 인자는 사용자가 <code>TR</code>을 구분하기 위한 용도.<br>
+두 번째 인자는 요청하는 <code>TR</code> 이름으로 <code>opt10001</code>을 입력.<br>
+세 번째 인자는 단순 조회 <code>TR</code>일 때는 0을 입력.<br>
+네 번째 인자는 4자리의 화면 번호.</p>
+<p><code>TR</code>을 서버로 송신했으므로 <a href="../kiwoom-method/#OnReceiveTrData">OnReceiveTrData</a>라는 이벤트를 처리할 메서드를 구현하고 이를 이벤트와 연결.</p>
+<p><code>OnReceiveTrData</code> 이벤트가 발생했다는 것은 서버로부터 데이터를 전달 받았음을 의미하므로 <code>OnReceiveTrData</code> 메서드에서 <a href="../kiwoom-method/#OnReceiveTrData">CommGetData</a> 메서드를 호출하여 데이터를 얻음.</p>
+<p>아래와 같이 이벤트와 이벤트 처리용 메서드를 연결</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        <span class="comment"># 생략</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># OpenAPI+ Event</span></span><br><span class="line">        self.kiwoom.OnReceiveTrData.connect(self.receive_trdata)</span><br></pre></td></tr></table></figure>
+<h2 id="계좌-정보-얻어-오기"><a class="header-anchor" href="#계좌-정보-얻어-오기">¶</a>계좌 정보 얻어 오기</h2>
+<p><a href="../kiwoom-method/#GetLoginInfo">GetLoginInfo</a> 메서드를 사용하면 계좌 개수, 계좌 번호, 사용자 ID, 사용자명등의 정보를 얻어올 수 있음.</p>
+<figure class="highlight python"><figcaption><span>계좌 정보 얻어 오기</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span>  *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QAxContainer <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Kiwoom Login</span></span><br><span class="line">        self.kiwoom = QAxWidget(<span class="string">"KHOPENAPI.KHOpenAPICtrl.1"</span>)</span><br><span class="line">        self.kiwoom.dynamicCall(<span class="string">"CommConnect()"</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># OpenAPI+ Event</span></span><br><span class="line">        self.kiwoom.OnEventConnect.connect(self.event_connect)</span><br><span class="line"></span><br><span class="line">        self.setWindowTitle(<span class="string">"계좌 정보"</span>)</span><br><span class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">150</span>)</span><br><span class="line"></span><br><span class="line">        btn1 = QPushButton(<span class="string">"계좌 얻기"</span>, self)</span><br><span class="line">        btn1.move(<span class="number">190</span>, <span class="number">20</span>)</span><br><span class="line">        btn1.clicked.connect(self.btn1_clicked)</span><br><span class="line"></span><br><span class="line">        self.text_edit = QTextEdit(self)</span><br><span class="line">        self.text_edit.setGeometry(<span class="number">10</span>, <span class="number">60</span>, <span class="number">280</span>, <span class="number">80</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">btn1_clicked</span><span class="params">(self)</span>:</span></span><br><span class="line">        account_num = self.kiwoom.dynamicCall(<span class="string">"GetLoginInfo(QString)"</span>, [<span class="string">"ACCNO"</span>])</span><br><span class="line">        self.text_edit.append(<span class="string">"계좌번호: "</span> + account_num.rstrip(<span class="string">';'</span>))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">event_connect</span><span class="params">(self, err_code)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> err_code == <span class="number">0</span>:</span><br><span class="line">            self.text_edit.append(<span class="string">"로그인 성공"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    myWindow = MyWindow()</span><br><span class="line">    myWindow.show()</span><br><span class="line">    app.exec_()</span><br></pre></td></tr></table></figure>
+<p><code>GetLoginInfo</code> 메서드는 이벤트 방식으로 동작하는 것도 아니므로 단순히 <code>dynamicCall</code> 메서드를 통해 호출하면 값을 바로 얻을 수 있음.<br>
+다만 메서드의 인자가 한 개인데 실제 인자를 넘겨주는 부분에서 다음 코드와 같이 반드시 리스트 형태로 값을 넘겨줘야 함.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">account_num = self.kiwoom.dynamicCall(<span class="string">"GetLoginInfo(QString)"</span>, [<span class="string">"ACCNO"</span>]</span><br></pre></td></tr></table></figure>
+<p>함수의 인자로 <code>ACCNO</code>를 넘겨주면 서버는 전체 계좌를 반환해주는데 각 계좌 번호에는 세미콜론이 붙어 있어 계좌 번호를 출력할 때 문자열의 <code>rstrip</code> 메서드를 사용하여 문자열 끝의 세미콜론을 제거.</p>
+<h2 id="종목-코드-및-한글명-얻어-오기"><a class="header-anchor" href="#종목-코드-및-한글명-얻어-오기">¶</a>종목 코드 및 한글명 얻어 오기</h2>
+<p>증권사 API를 사용할 때 종목 코드는 가장 기본이 되는 데이터.<br>
+따라서 종목 코드를 API를 통해서 먼저 얻어 와야 각 종목에 대한 반복적인 작업 등을 자동화시킬 수 있음.</p>
+<p>종목 코드 목록을 얻어오는 메서드는 <a href="../kiwoom-method/#GetCodeListByMarket">GetCodeListByMarket</a>.<br>
+종목 코드로부터 한글 종목명을 얻기 위해서는 <a href="../kiwoom-method/#GetMasterCodeName">GetMasterCodeName</a> 사용.</p>
+<figure class="highlight python"><figcaption><span>종목 코드 및 종목 한글명 얻어 오기</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span>  *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QAxContainer <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line"></span><br><span class="line">        self.kiwoom = QAxWidget(<span class="string">"KHOPENAPI.KHOpenAPICtrl.1"</span>)</span><br><span class="line">        self.kiwoom.dynamicCall(<span class="string">"CommConnect()"</span>)</span><br><span class="line"></span><br><span class="line">        self.setWindowTitle(<span class="string">"종목 코드"</span>)</span><br><span class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">150</span>)</span><br><span class="line"></span><br><span class="line">        btn1 = QPushButton(<span class="string">"종목코드 얻기"</span>, self)</span><br><span class="line">        btn1.move(<span class="number">190</span>, <span class="number">10</span>)</span><br><span class="line">        btn1.clicked.connect(self.btn1_clicked)</span><br><span class="line"></span><br><span class="line">        self.listWidget = QListWidget(self)</span><br><span class="line">        self.listWidget.setGeometry(<span class="number">10</span>, <span class="number">10</span>, <span class="number">170</span>, <span class="number">130</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">btn1_clicked</span><span class="params">(self)</span>:</span></span><br><span class="line">        ret = self.kiwoom.dynamicCall(<span class="string">"GetCodeListByMarket(QString)"</span>, [<span class="string">"0"</span>])</span><br><span class="line">        kospi_code_list = ret.split(<span class="string">';'</span>)</span><br><span class="line">        kospi_code_name_list = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> kospi_code_list:</span><br><span class="line">            name = self.kiwoom.dynamicCall(<span class="string">"GetMasterCodeName(QString)"</span>, [x])</span><br><span class="line">            kospi_code_name_list.append(x + <span class="string">" : "</span> + name)</span><br><span class="line"></span><br><span class="line">        self.listWidget.addItems(kospi_code_name_list)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    myWindow = MyWindow()</span><br><span class="line">    myWindow.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<p>종목 코드 및 종목 한글명을 출력하기 위해 <code>QListWidget</code> 위젯 사용.</p>
+<p><code>GetCodeListByMarket</code> 메서드의 리턴 값은 문자열이고 해당 문자열 내에서 각 종목은 세미콜론으로 구분.<br>
+종목 코드를 효과적으로 관리하기 위해 세미콜론을 기준으로 문자열을 분리하여 파이썬 리스트를 생성.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kospi_code_list = ret.split(<span class="string">';'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><figcaption><span>한글 종목명 얻기</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kospi_code_name_list = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> kospi_code_list:</span><br><span class="line">    name = self.kiwoom.dynamicCall(<span class="string">"GetMasterCodeName(QString)"</span>, [x])</span><br><span class="line">    kospi_code_name_list.append(x + <span class="string">" : "</span> + name)</span><br></pre></td></tr></table></figure>
+<p>종목 코드와 종목 한글명이 저장된 파이썬 리스트를 <code>addItems</code> 메서드의 인자로 넘겨주어 파이썬 리스트에 있는 항목들이 <code>QListWidget</code>에 추가되도록 해줌.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.listWidget.addItems(kospi_code_name_list)</span><br></pre></td></tr></table></figure>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://ultrasound.github.io2017/11/21/openapi-basic-api/" data-id="cja98ydma0006bwv33wgzhx4k" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ultrasound" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://www.instagram.com/ultrasound2k/" target="_blank">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://www.linkedin.com/in/ultrasound2k" target="_blank">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="../../../../index.html" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="../kiwoom-tr/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">kiwoom TR</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></p>
+                            <p class="item-title"><a href="" class="title">OpenAPI+ basic API</a></p>
+                            <p class="item-date"><time datetime="2017-11-21T06:30:53.508Z" itemprop="datePublished">2017-11-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></p>
+                            <p class="item-title"><a href="../kiwoom-tr/" class="title">kiwoom TR</a></p>
+                            <p class="item-date"><time datetime="2017-11-21T06:30:35.204Z" itemprop="datePublished">2017-11-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></p>
+                            <p class="item-title"><a href="../kiwoom-method/" class="title">Kiwoom method</a></p>
+                            <p class="item-date"><time datetime="2017-11-21T06:30:28.545Z" itemprop="datePublished">2017-11-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></p>
+                            <p class="item-title"><a href="../python-trading-system/" class="title">python trading system</a></p>
+                            <p class="item-date"><time datetime="2017-11-21T04:55:01.953Z" itemprop="datePublished">2017-11-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="../../12/hexo-tag-plugins-test/" class="title">hexo tag plugins test</a></p>
+                            <p class="item-date"><time datetime="2017-11-12T05:32:33.232Z" itemprop="datePublished">2017-11-12</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/11/">November 2017</a><span class="archive-list-count">7</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/api/">API</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tdd/">TDD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tr/">TR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/kiwoom/">kiwoom</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/trading/">trading</a><span class="tag-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="../../../../tags/api/" style="font-size: 10px;">API</a> <a href="../../../../tags/tdd/" style="font-size: 10px;">TDD</a> <a href="../../../../tags/tr/" style="font-size: 10px;">TR</a> <a href="../../../../tags/kiwoom/" style="font-size: 20px;">kiwoom</a> <a href="../../../../tags/python/" style="font-size: 16.67px;">python</a> <a href="../../../../tags/trading/" style="font-size: 13.33px;">trading</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://wikidocs.net/book/110">Python Trading</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="../../../../index.html" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Hyogeun Kim</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'ultrasound-github-io';
+    
+    
+    var disqus_url = 'https://ultrasound.github.io2017/11/21/openapi-basic-api/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="../../../../libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="../../../../libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="../../../../js/main.js"></script>
+
+    </div>
+</body>
+</html>
