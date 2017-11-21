@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>python trading system | Just Fucking Do It!!!</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="python,kiwoom,trading" />
+    
+    <meta name="description" content="¶요구 사항  Anaconda - Python 3.5 32 bit Pycharm IDE는 항상 관리자 권한으로 실행. 키움증권 계좌 개설 키움증권 OpenAPI+ 신청 KOA Studio  ¶사전 작업  Anaconda 32bit 설치 Python 3.5 사용 환경 만들기 - conda install -c anaconda python35 번개 HTS 설치.">
+<meta name="keywords" content="python,kiwoom,trading">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python trading system">
+<meta property="og:url" content="https://ultrasound.github.io/2017/11/21/python-trading-system/index.html">
+<meta property="og:site_name" content="Just Fucking Do It!!!">
+<meta property="og:description" content="¶요구 사항  Anaconda - Python 3.5 32 bit Pycharm IDE는 항상 관리자 권한으로 실행. 키움증권 계좌 개설 키움증권 OpenAPI+ 신청 KOA Studio  ¶사전 작업  Anaconda 32bit 설치 Python 3.5 사용 환경 만들기 - conda install -c anaconda python35 번개 HTS 설치.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://wikidocs.net/images/page/5856/r18.02.png">
+<meta property="og:updated_time" content="2017-11-21T04:57:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python trading system">
+<meta name="twitter:description" content="¶요구 사항  Anaconda - Python 3.5 32 bit Pycharm IDE는 항상 관리자 권한으로 실행. 키움증권 계좌 개설 키움증권 OpenAPI+ 신청 KOA Studio  ¶사전 작업  Anaconda 32bit 설치 Python 3.5 사용 환경 만들기 - conda install -c anaconda python35 번개 HTS 설치.">
+<meta name="twitter:image" content="https://wikidocs.net/images/page/5856/r18.02.png">
+    
+
+    
+        <link rel="alternate" href="/" title="Just Fucking Do It!!!" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="../../../../libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="../../../../libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="../../../../css/style.css">
+
+    <script src="../../../../libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="../../../../libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="../../../../libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="../../../../index.html" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="../../../../index.html">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="../../../../about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '../../../../content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="../../../../js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-python-trading-system" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        python trading system
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="" class="article-date">
+            <time datetime="2017-11-21T04:55:01.953Z" itemprop="datePublished">2017-11-21</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="../../../../tags/kiwoom/">kiwoom</a>, <a class="tag-link" href="../../../../tags/python/">python</a>, <a class="tag-link" href="../../../../tags/trading/">trading</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="요구-사항"><a class="header-anchor" href="#요구-사항">¶</a>요구 사항</h2>
+<ol>
+<li>Anaconda - Python 3.5 32 bit</li>
+<li><code>Pycharm IDE</code>는 항상 <code>관리자 권한</code>으로 실행.</li>
+<li>키움증권 계좌 개설</li>
+<li>키움증권 <code>OpenAPI+</code> 신청</li>
+<li><code>KOA Studio</code></li>
+</ol>
+<h2 id="사전-작업"><a class="header-anchor" href="#사전-작업">¶</a>사전 작업</h2>
+<ol>
+<li><a href="https://www.anaconda.com/download/" target="_blank" rel="external">Anaconda</a> 32bit 설치</li>
+<li>Python 3.5 사용 환경 만들기 - <code>conda install -c anaconda python35</code></li>
+<li>번개 HTS 설치.</li>
+<li><code>키움 Open API+</code> 설치.</li>
+</ol>
+<h2 id="개발-1일차"><a class="header-anchor" href="#개발-1일차">¶</a>개발 1일차</h2>
+<h3 id="1-자동-버전처리-스크립트"><a class="header-anchor" href="#1-자동-버전처리-스크립트">¶</a>1) 자동 버전처리 스크립트</h3>
+<p>OpenAPI+를 이용해 개발한 프로그램에서 로그인을 시도할 때 버전 처리가 필요하면 버전 처리 메시지 창이 아래와 같이 나타남.</p>
+<p><img src="https://wikidocs.net/images/page/5856/r18.02.png" alt="버전 처리 메시지 창"></p>
+<p>버전 처리를 가장 쉽게 할 수 있는 방법은 번개 HTS를 사용하는 것.<br>
+번개 HTS를 실행하면 자동으로 버전 처리가 완료되기 때문에 OpenAPI+를 사용해 개발한 프로그램을 실행하기 전에 먼저 번개 HTS를 실행하면 버전 처리 문제가 해결됨.</p>
+<p><code>고객 ID</code>와 <code>비밀번호</code>를 입력하는 자동화는 <code>pywinauto</code> 패키지를 이용하면 해결.<br>
+<code>pywinauto</code> 패키지는 윈도우 대화상자에 자동으로 마우스나 키보드 이벤트를 보낼 수 있음.</p>
+<p><code>pip install pywinauto</code>를 입력해 패키지를 설치</p>
+<p><code>pywinquto</code> 패키지를 이용해 코드를 작성하기 위해 <code>PyCharm</code>과 같은 파이썬 <code>IDE</code>를 관리자 권한으로 실행.</p>
+<p>아래와 같이 코드를 작성 후 실행하면 키움 번개 로그인 창이 출력 됨.</p>
+<figure class="highlight python"><figcaption><span>로그인 창 출력</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pywinauto <span class="keyword">import</span> application</span><br><span class="line"><span class="keyword">from</span> pywinauto <span class="keyword">import</span> timings</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">app = application.Application()</span><br><span class="line">app.start(<span class="string">"C:/Kiwoom/KiwoomFlash3/bin/nkministarter.exe"</span>)</span><br><span class="line"></span><br><span class="line">title = <span class="string">"번개3 Login"</span></span><br><span class="line">dlg = timings.WaitUntilPasses(<span class="number">20</span>, <span class="number">0.5</span>, <span class="keyword">lambda</span>: app.window_(title=title))</span><br></pre></td></tr></table></figure>
+<p><img src="https://wikidocs.net/images/page/5856/r18.03.png" alt="키움번개 로그인 창"></p>
+<p>마우스와 키보드 입력 자동화</p>
+<figure class="highlight python"><figcaption><span>마우스와 키보드 입력 자동화</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">pass_ctrl = dlg.Edit2</span><br><span class="line">pass_ctrl.SetFocus()</span><br><span class="line">pass_ctrl.TypeKeys(<span class="string">'xxxx'</span>) <span class="comment"># 로그인 비밀 번호 입력</span></span><br><span class="line"></span><br><span class="line">cert_ctrl = dlg.Edit3</span><br><span class="line">cert_ctrl.SetFocus()</span><br><span class="line">cert_ctrl.TypeKyes(<span class="string">'yyyy'</span>) <span class="comment"># 인증 비밀 번호 입력</span></span><br><span class="line"></span><br><span class="line">btn_ctrl = dlg.Button0</span><br><span class="line">btn_ctrl.Click()</span><br></pre></td></tr></table></figure>
+<p>위의 모든 코드를 실행하면 자동으로 로그인이 이뤄진 후 아래와 같이 키움 번개가 정상적으로 실행되는 것을 확인.<br>
+이 과정에서 업데이트가 있는 경우 업데이트 파일을 다운로드하기 때문에 자동으로 버전 처리가 완료 됨.</p>
+<p><img src="https://wikidocs.net/images/page/5856/r18.05.png" alt="키움 번개3"></p>
+<p>윈도우에서는 <code>taskkill</code> 명령을 이용해 특정 프로그램을 종료할 수 있음.<br>
+파이썬에서 윈도우 명령을 실행하려면 <code>os</code> 모듈의 <code>system</code> 함수를 사용하면 됨.<br>
+참고로 로그인 후에 업데이트를 수행하는 과정에 시간이 소용되기 때문에 <code>time.sleep</code> 함수를 호출해 약 50초 정도 대기.</p>
+<figure class="highlight python"><figcaption><span>50초 후 키움 종료</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">time.sleep(<span class="number">50</span>)</span><br><span class="line">os.system(<span class="string">"taskkill /im nkmini.exe"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><figcaption><span>전체코드</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pywinauto <span class="keyword">import</span> application</span><br><span class="line"><span class="keyword">from</span> pywinauto <span class="keyword">import</span> timings</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">app = application.Application()</span><br><span class="line">app.start(<span class="string">"C:/Kiwoom/KiwoomFlash2/khministarter.exe"</span>)</span><br><span class="line"></span><br><span class="line">title = <span class="string">"번개 Login"</span></span><br><span class="line">dlg = timings.WaitUntilPasses(<span class="number">20</span>, <span class="number">0.5</span>, <span class="keyword">lambda</span>: app.window_(title=title))</span><br><span class="line"></span><br><span class="line">pass_ctrl = dlg.Edit2</span><br><span class="line">pass_ctrl.SetFocus()</span><br><span class="line">pass_ctrl.TypeKeys(<span class="string">'xxxx'</span>)</span><br><span class="line"></span><br><span class="line">cert_ctrl = dlg.Edit3</span><br><span class="line">cert_ctrl.SetFocus()</span><br><span class="line">cert_ctrl.TypeKeys(<span class="string">'yyyy'</span>)</span><br><span class="line"></span><br><span class="line">btn_ctrl = dlg.Button0</span><br><span class="line">btn_ctrl.Click()</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">50</span>)</span><br><span class="line">os.system(<span class="string">"taskkill /im khmini.exe"</span>)</span><br></pre></td></tr></table></figure>
+<p>만약 <code>PyCharm</code>을 관리자 권한으로 실행하기 않을 경우 아래와 같은 에러가 발생.</p>
+<p><img src="https://wikidocs.net/images/page/5856/r18.06.png" alt="관리자 권한으로 실행하지 않은 경우 발생하는 에러"></p>
+<p>윈도우 대화상자의 이름과 각 컨트롤의 이름을 알아내가 위해 <a href="https://github.com/pywinauto/SWAPY" target="_blank" rel="external">SWAPY</a> 라는 실행 프로그램을 사용.</p>
+<p><img src="https://wikidocs.net/images/page/5856/r18.07.png" alt="SWAPY 프로그램"></p>
+<h3 id="2-윈도우-작업-스케쥴러"><a class="header-anchor" href="#2-윈도우-작업-스케쥴러">¶</a>2) 윈도우 작업 스케쥴러</h3>
+<p>윈도우의 작업 스케쥴러를 이용해 정해진 시간에 파이썬 스크립트 자동 실행.</p>
+<p><img src="https://wikidocs.net/images/page/5857/r18.08.png" alt="작업 스케쥴러 실행"></p>
+<p><img src="https://wikidocs.net/images/page/5857/r18.09.png" alt="새 작업 만들기"></p>
+<p><img src="https://wikidocs.net/images/page/5857/r18.10.png" alt="[일반] 탭 설정"></p>
+<p><img src="https://wikidocs.net/images/page/5857/r18.11.png" alt="트리거 설정(1)"></p>
+<p><img src="https://wikidocs.net/images/page/5857/r18.12.png" alt="트리거 설정(2)"></p>
+<p><img src="https://wikidocs.net/images/page/5857/r18.13.png" alt="새 동작 만들기"></p>
+<p><code>python.exe</code> 대신 <code>pythonw.exe</code>를 선택한 것은 스크립트 실행 시 콘솔</p>
+<p><img src="https://wikidocs.net/images/page/5857/r18.14.png" alt="조건 항목 설정"></p>
+<h3 id="3-pytrader-구현"><a class="header-anchor" href="#3-pytrader-구현">¶</a>3) PyTrader 구현</h3>
+<p><code>Qt Designer</code>를 이용해 메인 윈도우를 만듬.</p>
+<p><a href="https://wikidocs.net/5218" target="_blank" rel="external">PyQt를 이용한 GUI 프로그래밍</a> 참조.</p>
+<p>프로그램에 사용할 무료 아이콘 <a href="http://www.myiconfinder.com/" target="_blank" rel="external">MyIconFinder</a> 나 <a href="http://www.flaticon.com/" target="_blank" rel="external">Flaticon</a></p>
+<p><code>PyTrader</code>에서 UI는 <code>Qt Designer</code>를 통해 생성한 <code>pytrader.ui</code> 파일을 불러와서 사용.<br>
+키움 <code>OpenAPI+</code>와 관련된 코드는 <code>Kiwoom</code> 클래스를 사용.</p>
+<figure class="highlight python"><figcaption><span>Kiwoom.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QAxContainer <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line"></span><br><span class="line">TR_REQ_TIME_INTERVAL = <span class="number">0.2</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Kiwoom</span><span class="params">(QAxWidget)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        self._create_kiwoom_instance()</span><br><span class="line">        self._set_signal_slots()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_create_kiwoom_instance</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.setControl(<span class="string">"KHOPENAPI.KHOpenAPICtrl.1"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_set_signal_slots</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.OnEventConnect.connect(self._event_connect)</span><br><span class="line">        self.OnReceiveTrData.connect(self._receive_tr_data)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">comm_connect</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.dynamicCall(<span class="string">"CommConnect()"</span>)</span><br><span class="line">        self.login_event_loop = QEventLoop()</span><br><span class="line">        self.login_event_loop.exec_()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_event_connect</span><span class="params">(self, err_code)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> err_code == <span class="number">0</span>:</span><br><span class="line">            print(<span class="string">"connected"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"disconnected"</span>)</span><br><span class="line"></span><br><span class="line">        self.login_event_loop.exit()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_code_list_by_market</span><span class="params">(self, market)</span>:</span></span><br><span class="line">        code_list = self.dynamicCall(<span class="string">"GetCodeListByMarket(QString)"</span>, market)</span><br><span class="line">        code_list = code_list.split(<span class="string">';'</span>)</span><br><span class="line">        <span class="keyword">return</span> code_list[:<span class="number">-1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_master_code_name</span><span class="params">(self, code)</span>:</span></span><br><span class="line">        code_name = self.dynamicCall(<span class="string">"GetMasterCodeName(QString)"</span>, code)</span><br><span class="line">        <span class="keyword">return</span> code_name</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_connect_state</span><span class="params">(self)</span>:</span></span><br><span class="line">        ret = self.dynamicCall(<span class="string">"GetConnectState()"</span>)</span><br><span class="line">        <span class="keyword">return</span> ret</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">set_input_value</span><span class="params">(self, id, value)</span>:</span></span><br><span class="line">        self.dynamicCall(<span class="string">"SetInputValue(QString, QString)"</span>, id, value)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">comm_rq_data</span><span class="params">(self, rqname, trcode, next, screen_no)</span>:</span></span><br><span class="line">        self.dynamicCall(<span class="string">"CommRqData(QString, QString, int, QString)"</span>, rqname, trcode, next, screen_no)</span><br><span class="line">        self.tr_event_loop = QEventLoop()</span><br><span class="line">        self.tr_event_loop.exec_()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_comm_get_data</span><span class="params">(self, code, real_type, field_name, index, item_name)</span>:</span></span><br><span class="line">        ret = self.dynamicCall(<span class="string">"CommGetData(QString, QString, QString, int, QString)"</span>, code,</span><br><span class="line">                               real_type, field_name, index, item_name)</span><br><span class="line">        <span class="keyword">return</span> ret.strip()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_get_repeat_cnt</span><span class="params">(self, trcode, rqname)</span>:</span></span><br><span class="line">        ret = self.dynamicCall(<span class="string">"GetRepeatCnt(QString, QString)"</span>, trcode, rqname)</span><br><span class="line">        <span class="keyword">return</span> ret</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_receive_tr_data</span><span class="params">(self, screen_no, rqname, trcode, record_name, next, unused1, unused2, unused3, unused4)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> next == <span class="string">'2'</span>:</span><br><span class="line">            self.remained_data = <span class="keyword">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.remained_data = <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> rqname == <span class="string">"opt10081_req"</span>:</span><br><span class="line">            self._opt10081(rqname, trcode)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self.tr_event_loop.exit()</span><br><span class="line">        <span class="keyword">except</span> AttributeError:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_opt10081</span><span class="params">(self, rqname, trcode)</span>:</span></span><br><span class="line">        data_cnt = self._get_repeat_cnt(trcode, rqname)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(data_cnt):</span><br><span class="line">            date = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"일자"</span>)</span><br><span class="line">            open = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"시가"</span>)</span><br><span class="line">            high = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"고가"</span>)</span><br><span class="line">            low = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"저가"</span>)</span><br><span class="line">            close = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"현재가"</span>)</span><br><span class="line">            volume = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"거래량"</span>)</span><br><span class="line"></span><br><span class="line">            self.ohlcv[<span class="string">'date'</span>].append(date)</span><br><span class="line">            self.ohlcv[<span class="string">'open'</span>].append(int(open))</span><br><span class="line">            self.ohlcv[<span class="string">'high'</span>].append(int(high))</span><br><span class="line">            self.ohlcv[<span class="string">'low'</span>].append(int(low))</span><br><span class="line">            self.ohlcv[<span class="string">'close'</span>].append(int(close))</span><br><span class="line">            self.ohlcv[<span class="string">'volume'</span>].append(int(volume))</span><br></pre></td></tr></table></figure>
+<p><code>pytrader.py</code> 파일에 모듈을 임포트하고 ui 파일을 불러오는 코드를 구현.</p>
+<figure class="highlight python"><figcaption><span>pytrader.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> uic</span><br><span class="line"><span class="keyword">from</span> Kiwoom <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">form_class = uic.loadUiType(<span class="string">"pytrader.ui"</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow, form_class)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        self.setupUi(self)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    myWindow = MyWindow()</span><br><span class="line">    myWindow.show()</span><br><span class="line">    app.exec_()</span><br></pre></td></tr></table></figure>
+<p><code>PyTrader</code> 프로그램이 실행될 때 키움 로그인이 진행되도록 해주기 위해 생성자에서 키움 객체를 생성한 후 [Comm_Connect 메서드를 호출.</p>
+<figure class="highlight python"><figcaption><span>call comm_connect pytrader.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow, form_class)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        self.setupUi(self)</span><br><span class="line"></span><br><span class="line">        self.kiwoom = Kiwoom()</span><br><span class="line">        self.kiwoom.comm_connect()</span><br></pre></td></tr></table></figure>
+<p><code>StatusBar</code> 위젯에 서버 연결 상태 및 현재 시간을 출력하는 기능 구현.<br>
+서버 연결 상태는 <code>Kiwoom class</code>에 추가한 <code>get_connect_state</code> 메서드를 사용.</p>
+<p>현재 시간을 출력하는 기능은 일정한 단위로 현재 시간을 얻어온 후 이를 <code>StatusBar</code>에 출력.<br>
+이를 위해서는 주기적으로 이벤트를 발생시키는 <code>Timer</code>가 필요.<br>
+예를 들어, <code>Timer</code>가 1초에 한 번 이벤트(시그널)를 발생시키면 이 이벤트를 처리하는 메서드(슬롯)에서 현재 시간을 얻어온 후 이를 <code>StatusBar</code>에 출력</p>
+<p>Qt의 <code>QTimer</code> 클래스를 사용하면 정해진 시간마다 이벤트를 발생시킬 수 있음.</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">self.timer = QTimer(self)</span><br><span class="line">self.timer.start(<span class="number">1000</span>)</span><br><span class="line">self.timer.timeout.connect(self.timout)</span><br></pre></td></tr></table></figure>
+<p><code>QTimer</code> 클래스는 <code>start</code> 메서드를 제공, 이 메서드에 인자로 <code>1000</code>을 지정하면 <code>1초</code>에 한 번씩 주기적으로 <code>timeout</code> 시그널이 발생.<br>
+따라서 <code>timeout</code> 시그널이 발생할 때 이를 처리할 슬롯으로 <code>self.timeout</code>을 설정하면 됨.</p>
+<figure class="highlight python"><figcaption><span>timout class pytrader.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">timeout</span><span class="params">(self)</span>:</span></span><br><span class="line">    current_time = QTime.currentTime()</span><br><span class="line">    text_time = current_time.toString(<span class="string">"hh:mm:ss"</span>)</span><br><span class="line">    time_msg = <span class="string">"현재시간: "</span> + text_time</span><br><span class="line"></span><br><span class="line">    state = self.kiwoom.GetConnectState()</span><br><span class="line">    <span class="keyword">if</span> state == <span class="number">1</span>:</span><br><span class="line">        state_msg = <span class="string">"서버 연결 중"</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        state_msg = <span class="string">"서버 미 연결 중"</span></span><br><span class="line"></span><br><span class="line">    self.statusbar.showMessage(state_msg + <span class="string">" | "</span> + time_msg)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><figcaption><span>전체 pytrader.py 코드</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> uic</span><br><span class="line"><span class="keyword">from</span> Kiwoom <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">form_class = uic.loadUiType(<span class="string">"pytrader.ui"</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow, form_class)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        self.setupUi(self)</span><br><span class="line"></span><br><span class="line">        self.kiwoom = Kiwoom()</span><br><span class="line">        self.kiwoom.comm_connect()</span><br><span class="line"></span><br><span class="line">        self.timer = QTimer(self)</span><br><span class="line">        self.timer.start(<span class="number">1000</span>)</span><br><span class="line">        self.timer.timeout.connect(self.timeout)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">timeout</span><span class="params">(self)</span>:</span></span><br><span class="line">        current_time = QTime.currentTime()</span><br><span class="line">        text_time = current_time.toString(<span class="string">"hh:mm:ss"</span>)</span><br><span class="line">        time_msg = <span class="string">"현재시간: "</span> + text_time</span><br><span class="line"></span><br><span class="line">        state = self.kiwoom.get_connect_state()</span><br><span class="line">        <span class="keyword">if</span> state == <span class="number">1</span>:</span><br><span class="line">            state_msg = <span class="string">"서버 연결 중"</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            state_msg = <span class="string">"서버 미 연결 중"</span></span><br><span class="line"></span><br><span class="line">        self.statusbar.showMessage(state_msg + <span class="string">" | "</span> + time_msg)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    myWindow = MyWindow()</span><br><span class="line">    myWindow.show()</span><br><span class="line">    app.exec_()</span><br></pre></td></tr></table></figure>
+<h3 id="4-키움-openapi-자동-로그인"><a class="header-anchor" href="#4-키움-openapi-자동-로그인">¶</a>4) 키움 OpenAPI+ 자동 로그인</h3>
+<p>자동화를 위해 사용자 계정 컨트롤 기능 비활성화</p>
+<p><img src="https://wikidocs.net/images/page/5859/r18.20.png" alt="사용자 계정 컨트롤 설정"></p>
+<p>키움 증권 로그인 과정 자동화.<br>
+키움증권은 사용자의 편의를 위해 자동 로그인 기능을 지원.<br>
+자동 로그인 설정을 위해 <code>pytrader.py</code> 파일을 실행시켜 로그인을 진행.<br>
+정상적으로 로그인되면 아래와 같이 윈도우 오른쪽 아래의 아이콘 중 키움증권 아이콘에서 마우스 오른쪽 버튼을 클릭한 후 <code>계좌비밀번호 저장</code>을 선택.</p>
+<p><img src="https://wikidocs.net/images/page/5859/r18.21.png" alt="카움 OpenAPI+ 자동 로그인 설정"></p>
+<p>자동 로그인 설정은 계좌 단위로 가능한데, 계좌를 선택한 후 등록 부분에 계좌 비밀번호를 입력하고 <code>등록</code> 버튼을 눌러 등록.<br>
+비밀번호가 잘 등록되면 <code>AUTO</code>라는 체크박스를 체크.</p>
+<p><img src="https://wikidocs.net/images/page/5859/r18.22.png" alt="자동 로그인 설정"></p>
+<p>설정을 모두 완료했다면 실행시킨 PyTrader 프로그램을 종료.<br>
+그리고 다시 <code>pytrader.py</code> 파일을 실행해 보면 로그인 창이 화면에 나타나지 않고 바로 로그인이 수행된 후 <code>PyTrader</code> 프로그램이 실행 됨.</p>
+<h2 id="정리"><a class="header-anchor" href="#정리">¶</a>정리</h2>
+<ol>
+<li>윈도우 작업 스케쥴러를 이용해 매일 08:00에 키움 번개 자동 로그인 스크립트(<a href="http://test.py" target="_blank" rel="external">test.py</a>)를 실행.</li>
+<li>해당 스크립트가 실행되면 키움 번개에 로그인되면 버전 처리 완료.</li>
+<li>키움 번개 HTS 자동 종료.</li>
+<li>08:15 윈도우 작업 스케쥴러를 이용해 <code>pytrader.py</code> 파일을 실행.</li>
+<li>이때 위 그림 같이 자동 로그인 설정해 둠.</li>
+<li>아래 그림과 같은 순서로 프로그램이 실행되게 해두면 버전 처리 및 로그인 자동화.</li>
+</ol>
+<p><img src="https://wikidocs.net/images/page/5859/r18.23.png" alt="버전 처리 및 로그인 실행 시나리오"></p>
+<p><code>PyTrader</code> 개발과 관련해서 <code>키움 OpenAPI+</code> 관련 코드는 모두 <code>Kiwoom.py</code>에 구현.<br>
+UI는 <code>Qt Designer</code>를 사용해 <code>pytrader.ui</code> 파일에 구현.<br>
+<code>pytrader.py</code>에는 이벤트 처리하는 코드만 구현.</p>
+<h2 id="개발-2일차"><a class="header-anchor" href="#개발-2일차">¶</a>개발 2일차</h2>
+<p>주문 기능 추가.</p>
+<h3 id="1-ui-구성"><a class="header-anchor" href="#1-ui-구성">¶</a>1) UI 구성</h3>
+<p><code>QGroupBox</code> 위젯을 <code>MainWindow</code> 안으로 배치.</p>
+<p><img src="https://wikidocs.net/images/page/5929/r18.26.png" alt="Group Box 위젯"></p>
+<p><code>Label</code>을 선택. <code>Label</code>은 <code>PyQt의</code>QLabel` 클래스에 해당.</p>
+<p><img src="https://wikidocs.net/images/page/5929/r18.27.png" alt="QLabel 위젯"></p>
+<p><img src="https://wikidocs.net/images/page/5929/r18.28.png" alt="Label 배치"></p>
+<p><code>Combo Box</code>를 선택. <code>Combo Box</code>는 <code>QComboBox</code> 클래스를 의미</p>
+<p><img src="https://wikidocs.net/images/page/5929/r18.29.png" alt="Combo Box"></p>
+<p>세 개의 <code>Combo Box</code>를 <code>Main Window</code>에 배치.</p>
+<p><img src="https://wikidocs.net/images/page/5929/r18.30.png" alt="QComboBox"></p>
+<p><code>Combo Box</code> 위젯을 더블클릭하면 아래와 같이 세부 항목을 추가 할 수 있는 창이 나타남.</p>
+<p><img src="https://wikidocs.net/images/page/5929/r18.31.png" alt="주문 세부 항목 추가"></p>
+<p><img src="https://wikidocs.net/images/page/5929/r18.32.png" alt="종류 세부 항목 추가"></p>
+<p><img src="https://wikidocs.net/images/page/5929/r18.33.png" alt="수동주문 관련 UI 테스트"></p>
+<p><code>Line Edit</code>를 선택한 후 배치. <code>Line Edit</code>는 <code>QLineEdit</code> 클래스에 해당.</p>
+<p><img src="https://wikidocs.net/images/page/5929/r18.34.png" alt="Line Edit 위젯 추가"></p>
+<p><img src="https://wikidocs.net/images/page/5929/r18.35.png" alt="Edit Styly Sheet"></p>
+<p><code>Spin Box</code>를 선택한 후 수량과 가격 옆으로 배치.<br>
+<code>Push Button</code>을 선택한 후 맨 아래쪽에 배치.</p>
+<p><img src="https://wikidocs.net/images/page/5929/r18.36.png" alt="Spin Box와 Push Button"></p>
+<p><img src="https://wikidocs.net/images/page/5929/r18.37.png" alt="QSpinBix"></p>
+<h3 id="2-kiwoom-py-파일-업데이트"><a class="header-anchor" href="#2-kiwoom-py-파일-업데이트">¶</a>2) <a href="http://Kiwoom.py" target="_blank" rel="external">Kiwoom.py</a> 파일 업데이트</h3>
+<p>주문과 관련된 API를 처리하는 메서드를 구현.<br>
+<a href="../kiwoom-method/#sendorder">SendOrder</a> 메서드를 사용하면 주식 주문에 대한 정보를 서버로 전송.</p>
+<p>주문이 체결되면 증권사 서버는 아래와 같이 <code>OnReceiveChejanData</code>라는 이벤트를 발생.</p>
+<p>앞서 <code>OnReceiveTrData</code> 메서드 내에서 <code>CommGetData</code> 메서드를 호출해 데이터를 얻어왔던 것과 동일하게 체결과 관련해서는 <code>OnReceiveChejanData</code>라는 메서드 내에서 <code>GetChejanData</code>라는 메서드를 호출해서 체결잔고 데이터를 얻어 옴.</p>
+<img src="/2017/11/21/python-trading-system/JumunAPI_workflow.png">
+<p>Kiwoom 클래스에 <code>send_order</code> 메서드를 추가</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">send_order</span><span class="params">(self, rqname, screen_no, acc_no, order_type, code, quantity, price, hoga, order_no)</span>:</span></span><br><span class="line">    self.dynamicCall(<span class="string">"SendOrder(QString, QString, QString, int, QString, int, int, QString, QString)"</span>,</span><br><span class="line">                     [rqname, screen_no, acc_no, order_type, code, quantity, price, hoga, order_no])</span><br></pre></td></tr></table></figure>
+<p>체결잔고 데이터를 가져오는 메서드인 <code>GetChejanData</code>를 사용하는 <code>get_chejan_data</code> 메서드를 Kiwoom 클래스에 추가.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_chejan_data</span><span class="params">(self, fid)</span>:</span></span><br><span class="line">    ret = self.dynamicCall(<span class="string">"GetChejanData(int)"</span>, fid)</span><br><span class="line">    <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure>
+<p>주문체결 시점에서 키움증권 서버가 발생시키는 <code>OnReceiveChejanData</code> 이벤트를 처리하는 메서드를 구현.<br>
+먼저 <code>_set_signal_slots</code> 메서드에 시그널과 슬롯을 연결하는 코드 추가.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.OnReceiveChejanData.connect(self._receive_chejan_data)</span><br></pre></td></tr></table></figure>
+<p><code>OnReceiveChejanData</code> 이벤트가 발생할 때 호출되는 <code>_receive_chejan_data</code>는 다음과 같이 구현.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_receive_chejan_data</span><span class="params">(self, gubun, item_cnt, fid_list)</span>:</span></span><br><span class="line">    print(gubun)</span><br><span class="line">    print(self.get_chejan_data(<span class="number">9203</span>))</span><br><span class="line">    print(self.get_chejan_data(<span class="number">302</span>))</span><br><span class="line">    print(self.get_chejan_data(<span class="number">900</span>))</span><br><span class="line">    print(self.get_chejan_data(<span class="number">901</span>))</span><br></pre></td></tr></table></figure>
+<p><code>get_chejan_data</code> 메서드는 함수 인자인 <code>FID</code> 값을 통해 서로 다른 데이터를 얻을 수 있음.<br>
+더 자세한 <code>FID</code> 정보는 개발 가이드 <code>8.19절</code>을 참조.</p>
+<table>
+<thead>
+<tr>
+<th>FID</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9203</td>
+<td>주문번호</td>
+</tr>
+<tr>
+<td>302</td>
+<td>종목명</td>
+</tr>
+<tr>
+<td>900</td>
+<td>주문수량</td>
+</tr>
+<tr>
+<td>901</td>
+<td>주문가격</td>
+</tr>
+<tr>
+<td>902</td>
+<td>미체결수량</td>
+</tr>
+<tr>
+<td>904</td>
+<td>원주문번호</td>
+</tr>
+<tr>
+<td>905</td>
+<td>주문구분</td>
+</tr>
+<tr>
+<td>908</td>
+<td>주문/체결시간</td>
+</tr>
+<tr>
+<td>909</td>
+<td>체결번호</td>
+</tr>
+<tr>
+<td>911</td>
+<td>체결량</td>
+</tr>
+<tr>
+<td>10</td>
+<td>현재가, 체결가, 실시간 종가</td>
+</tr>
+</tbody>
+</table>
+<p><code>OpenAPI+</code>에서 계좌 정보 및 로그인 사용자 정보를 얻어오는 메서드는 <code>GetLoginInfo</code>.<br>
+다음과 같이 <code>dynamicCall</code> 메서드로 <code>GetLoginInfo</code> 메서드를 호출하는 <code>get_login_info</code> 메서드를 Kiwoom 클래스에 추가.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_login_info</span><span class="params">(self, tag)</span>:</span></span><br><span class="line">    ret = self.dynamicCall(<span class="string">"GetLoginInfo(QString)"</span>, tag)</span><br><span class="line">    <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure>
+<h3 id="3-pytrader-py-파일-업데이트"><a class="header-anchor" href="#3-pytrader-py-파일-업데이트">¶</a>3) <code>pytrader.py</code> 파일 업데이트</h3>
+<p>가장 먼저 추가할 기능은 <code>QLinkEdit</code> 위젯에 사용자가 코드명을 입력하면 해당 코드에 대한 종목명을 출력하는 기능.<br>
+<code>pytrader.py</code> 파일에 위젯에 대한 코드를 구현할 때 가장 먼저 할 일은 위젯의 이름을 파악하는 것.</p>
+<p><img src="https://wikidocs.net/images/page/5932/r18.40.png" alt="objectName 확인"></p>
+<p>사용자가 <code>lineEdit</code> 객체에 종목 코드를 입력하면 <code>PyTrader</code>는 사용자가 입력한 종목 코드를 읽은 후 키움증권의 <code>OpenAPI+</code>를 사용하여 종목명을 알아내야 함.<br>
+이를 위해 먼저 <code>lineEdit</code> 객체가 변경될 때 호출되는 슬롯을 지정.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.lineEdit.textChanged.connect(self.code_changed)</span><br></pre></td></tr></table></figure>
+<p>위에서 시그널 슬롯을 설정했기 때문에 <code>lineEdit</code> 객체로부터 <code>textChanged</code>라는 이벤트가 발생하면 <code>MyWindow</code> 클래스의 <code>code_changed</code> 메서드가 호출될 것임.</p>
+<p><code>MyWindow</code> 클래스에 <code>code_changed</code> 메서드를 다음과 같이 구현.<br>
+먼저 사용자가 입력한 종목 코드를 얻어 옴.<br>
+종목 코드에 대한 종목명은 Kiwoom 클래스에 구현된 <code>get_master_code_name</code> 메서드를 호출하여 알아냄.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">coe_changed</span><span class="params">(self)</span>:</span></span><br><span class="line">    code = self.lineEdit.text()</span><br><span class="line">    name = self.kiwoom.get_master_code_name(code)</span><br><span class="line">    self.lineEdit_2.ssetText(name)</span><br></pre></td></tr></table></figure>
+<p>계좌 정보를 <code>QComboBox</code> 위젯에 출력하는 코드 구현.<br>
+이를 위해 먼저 전체 계좌 개수와 계좌 번호를 키움증권으로부터 얻어 옴.<br>
+Kiwoom 클래스의 <code>get_login_info</code> 메서드를 사용하여 다음과 같이 필요한 데이터를 얻어 옴.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">accouns_num = int(self.kiwoom.get_login_info(<span class="string">"ACCOUNT_CNT"</span>))</span><br><span class="line">accounts = self.kiwoom.get_login_info(<span class="string">"ACCNO"</span>)</span><br></pre></td></tr></table></figure>
+<p>계좌 번호를 <code>QComboBox</code> 위젯에 출력하려면 아래와 같이 먼저 <code>objectName</code>을 확인.</p>
+<p><img src="https://wikidocs.net/images/page/5932/r18.41.png" alt="QComboBox objectName 확인"></p>
+<p>계좌가 여러 개인 경우 각 계좌는 <code>;</code>를 통해 구분됨. 따라서 먼저 얻어온 전체 계좌에 대해 <code>split</code> 메서드를 호출하여 리스트로 분리한 후 슬라이시을 통해 출력할 계좌번호를 선택.<br>
+계좌를 <code>QComboBox</code>에 출력하기 위해 <code>addItems</code> 메서드를 호출.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">accounts_list = accounts.split(<span class="string">';'</span>)[<span class="number">0</span>:accouns_num]</span><br><span class="line">self.comboBox.addItems(accounts_list)</span><br></pre></td></tr></table></figure>
+<p>마지막으로 현금주문에 대한 코드를 구현.<br>
+현금주문은 UI 창에서 <code>현금주문</code> 버튼을 클릭할 때 수행됨.<br>
+따라서 먼저 버튼의 이름을 확인한 후 해당 버튼에 대한 시그널과 슬롯을 연결.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.pushButton.clicked.connect(self.send_order)</span><br></pre></td></tr></table></figure>
+<p><code>send_order</code> 메서드를 구현<br>
+주의할 점은 사용자는 <code>QComboBox</code>를 통해 ‘신규매수’, ‘신규매도’, ‘매수취소’, '매도취소’와 같은 세부 항목을 선택하지만<br>
+실제 키움증권의 API에는 세부 항목에 대응되는 정숫값이 전달돼야 함.<br>
+마찬가지로 호가에서도 지정가일 때는 <code>00</code>이라는 문자열을 전달해야 하고, 시장가일 때는 <code>03</code>이라는 문자열을 전달해야 함.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">send_order</span><span class="params">(self)</span>:</span></span><br><span class="line">    order_type_lookup = &#123;<span class="string">'신규매수'</span>: <span class="number">1</span>, <span class="string">'신규매도'</span>: <span class="number">2</span>, <span class="string">'매수취소'</span>: <span class="number">3</span>, <span class="string">'매도취소'</span>: <span class="number">4</span>&#125;</span><br><span class="line">    hoga_lookup = &#123;<span class="string">'지정가'</span>: <span class="string">"00"</span>, <span class="string">'시장가'</span>: <span class="string">"03"</span>&#125;</span><br><span class="line"></span><br><span class="line">    account = self.comboBox.currentText()</span><br><span class="line">    order_type = self.comboBox_2.currentText()</span><br><span class="line">    code = self.lineEdit.text()</span><br><span class="line">    hoga = self.comboBox_3.currentText()</span><br><span class="line">    num = self.spinBox.value()</span><br><span class="line">    price = self.spinBox_2.value()</span><br><span class="line"></span><br><span class="line">    self.kiwoom.send_order(<span class="string">"send_order_req"</span>, <span class="string">"0101"</span>, account, order_type_lookup[order_type], code, num, price, hoga_lookup[hoga], <span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="4-매수-테스트"><a class="header-anchor" href="#4-매수-테스트">¶</a>4) 매수 테스트</h3>
+<ol>
+<li><code>pytrader.py</code> 파일을 관리자 권한으로 실행.</li>
+<li>거래할 계좌 번호를 선택한 후 주문을 신규매수로 선택.</li>
+<li>매수하고자 하는 종목코드를 입력</li>
+<li>종류에 시장가를 선택하고 적당한 수량을 입력한 후 <code>현금주문</code> 버튼을 클릭</li>
+</ol>
+<p>매수 API가 정상적으로 동작했는지를 확인하는 쉬운 방법은 HTS를 사용하는 것</p>
+<p><img src="https://wikidocs.net/images/page/5933/r18.44.png" alt="영웅문을 이용한 매수 종목 확인"></p>
+<p>다른 방법은 KOA Studio를 사용하는 것.<br>
+아래 그림처럼 <code>TR</code> 목록에서 opt10085를 선택한 후 오른쪽 계좌번오에 계좌번호를 입력한 후 <code>조회</code> 버튼을 클릭하면 화면 하단 출력부에 데이터가 출력.</p>
+<p><img src="https://wikidocs.net/images/page/5933/r18.43.png" alt="KOA Studio opt1008을 이용한 매수 종목 확인"></p>
+<h2 id="개발-3일차"><a class="header-anchor" href="#개발-3일차">¶</a>개발 3일차</h2>
+<p>보유 주식 현황 출력과 잔고확인 기능 구현.</p>
+<p><img src="https://wikidocs.net/images/page/6233/r18.45.png" alt="영웅문의 주식종합 잔고확인 화면(보유 주식 종목 현황"></p>
+<p><img src="https://wikidocs.net/images/page/6233/r18.46.png" alt="영웅문의 주식종합 잔고확인 화면(잔고 현황)"></p>
+<h3 id="1-ui-구성-v2"><a class="header-anchor" href="#1-ui-구성-v2">¶</a>1) UI 구성</h3>
+<p><img src="https://wikidocs.net/images/page/6234/r18.48.png" alt="보유 주식 현황과 잔고확인 UI"></p>
+<p><img src="https://wikidocs.net/images/page/6234/r18.49.png" alt="Table Widget 배치"></p>
+<p><img src="https://wikidocs.net/images/page/6234/r18.50.png" alt="Edit Items 항목 선택"></p>
+<p><img src="https://wikidocs.net/images/page/6234/r18.51.png" alt="칼럼 항목 추가"></p>
+<p><code>Table Widget</code>을 선택한 후 아래와 같이 <code>Property Editor</code>에서 <code>QTableWidget</code> 항목에서 <code>rowCount</code> 값을 <code>1</code>로 변경.<br>
+<code>QTableWidget</code> 객체는 <code>rowCount</code> 값을 제대로 설정하지 않으면 아이템을 추가할 수 없으므로 반드시 값을 설정.</p>
+<p><img src="https://wikidocs.net/images/page/6234/r18.52.png" alt="rowCount 조정"></p>
+<p><img src="https://wikidocs.net/images/page/6234/r18.53.png" alt="보유종목 현황을 확인하기 위한 Table Widget 추가"></p>
+<p><img src="https://wikidocs.net/images/page/6234/r18.54.png" alt="보유종목 현황 칼럼 추가"></p>
+<p><img src="https://wikidocs.net/images/page/6234/r18.55.png" alt="Check Box 및 Push Button 배치"></p>
+<h3 id="2-kiwoom-py-파일-업데이트-v2"><a class="header-anchor" href="#2-kiwoom-py-파일-업데이트-v2">¶</a>2) <code>Kiwoom.py</code> 파일 업데이트</h3>
+<p><code>KOA Studio</code>를 참고하면 잔고 및 보유종목 현황 출력 기능에 필요한 대부분의 데이터는 <code>opw00018</code>이라는 <code>TR</code>를 통해 얻을 수 있음.</p>
+<p><img src="https://wikidocs.net/images/page/6235/r18.57.png" alt="opw00018 TR 사용"></p>
+<p>예수금 정보는 <code>opw00001 TR</code>을 사용.</p>
+<p><img src="https://wikidocs.net/images/page/6235/r18.58.png" alt="opw00001 TR 사용"></p>
+<img src="/2017/11/21/python-trading-system/tr_request_workflow.png">
+<p>먼저 <code>OnReceiveTrData</code> 이벤트가 발생할 때 수신 데이터를 가져오는 함수인 <code>_opw0001</code>를 Kiwoom 클래스에 추가.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_opw00001</span><span class="params">(self, rqname, trcode)</span>:</span></span><br><span class="line">    self.d2_deposit = self._comm_get_data(trcode, <span class="string">""</span>, rqname, <span class="number">0</span>, <span class="string">"d+2추정예수금"</span>)</span><br></pre></td></tr></table></figure>
+<p><code>_receive_tr_data</code> 메서드에서 <code>_opw00001</code> 메서드를 호출하도록 코드 수정.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> rqname == <span class="string">"opt10081_req"</span></span><br><span class="line">    self._opt10081(rqname, trcode)</span><br><span class="line"></span><br><span class="line"><span class="keyword">elif</span> rqname == <span class="string">"opw00001_req"</span></span><br><span class="line">    self._opw00001(rqname, trcode)</span><br></pre></td></tr></table></figure>
+<p><code>d+2 추정예수금</code>을 잘 얻어오는지 확인하기 위해 <code>Kiwoom.py</code> 파을이 <code>main</code> 코드 부분을 아래와 같이 수정.</p>
+<figure class="highlight plain"><figcaption><span>Kiwoom.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">if __name__ == &quot;__main__&quot;</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    kiwoom = Kiwoom()</span><br><span class="line">    kiwoom.comm_connect()</span><br><span class="line"></span><br><span class="line">    kiwoom.set_input_value(&quot;계좌번호&quot;, &quot;8087711111&quot;)</span><br><span class="line">    kiwoom.set_input_value(&quot;비밀번호&quot;, &quot;0000&quot;)</span><br><span class="line">    kiwoom.comm_rq_data(&quot;opw00001_req&quot;, &quot;opw00001&quot;, 0, &quot;2000&quot;)</span><br><span class="line"></span><br><span class="line">    print(kiwoom.de_deposit)</span><br></pre></td></tr></table></figure>
+<p>얻어온 <code>d+2추정예수금</code>을 확인하면 <code>000000499225300</code>와 같이 문자열의 앞쪽에 <code>0</code>이 존재하는 것을 확인.</p>
+<p>보통 금액은 천의 자리마다 콤마를 사용하여 표시. 이를 위해 Kiwoom 클래스에 <code>change_format</code>이라는 <code>static method</code>를 추가.<br>
+<code>change_format</code> 메서드는 입력된 문자열에 대해 <code>lstrip</code> 메서드를 통해 문자열 왼쪽에 존재하는 <code>-</code> 또는 <code>0</code>을 제거.<br>
+그리고 <code>format</code> 함수를 통해 천의 자리마다 콤마를 추가한 문자열로 변경.</p>
+<figure class="highlight python"><figcaption><span>staticmethod</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@staticmethod</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">change_format</span><span class="params">(data)</span>:</span></span><br><span class="line">    strip_data = data.lstrip(<span class="string">'-0'</span>)</span><br><span class="line">    <span class="keyword">if</span> strip_data == <span class="string">''</span>:</span><br><span class="line">        strip_data = <span class="string">'0'</span></span><br><span class="line"></span><br><span class="line">    format_data = format(int(strip_data), <span class="string">',d'</span>)</span><br><span class="line">    <span class="keyword">if</span> data.startswith(<span class="string">'-'</span>):</span><br><span class="line">        format_data = <span class="string">'-'</span> + format_data</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> format_data</span><br></pre></td></tr></table></figure>
+<p>정적 메서드를 호출하려면 정적 메서드 이름 앞에 클래스 이름을 붙여줌.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_opw00001</span><span class="params">(self, rqname, trcode)</span>:</span></span><br><span class="line">    d2_deposit = self._comm_get_data(trcode, <span class="string">""</span>, rqnam, <span class="number">0</span>, <span class="string">"d+2추정예수금"</span>)</span><br><span class="line">    self.d2_deposit = Kiwoom.change_format(d2_deposit)</span><br></pre></td></tr></table></figure>
+<p><code>총매입금액</code>, <code>총평가금액</code>, <code>총평가손익금액</code>, <code>총수익률</code>, <code>추정예탁자산</code>을 <code>_comm_get_data</code> 메서드를 통해 얻어 옴.<br>
+얻어온 데이터는 <code>change_format</code> 메서드를 통해 포맷을 문자열로 변경</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_opw00018</span><span class="params">(self, rqname, trcode)</span>:</span></span><br><span class="line">    total_purchase_price = self._comm_get_data(trcode, <span class="string">""</span>, rqname, <span class="number">0</span>, <span class="string">"총매입금액"</span>)</span><br><span class="line">    total_eval_price = self._comm_get_data(trcode, <span class="string">""</span>, rqname, <span class="number">0</span>, <span class="string">"총평가금액"</span>)</span><br><span class="line">    total_eval_profit_loss_price = self._comm_get_data(trcode, <span class="string">""</span>, rqname, <span class="number">0</span>, <span class="string">"총평가손익금액"</span>)</span><br><span class="line">    total_earning_rate = self._comm_get_data(trcode, <span class="string">''</span>, rqname, <span class="number">0</span>, <span class="string">"총수익률(%)"</span>)</span><br><span class="line">    estimated_deposit = self._comm_get_data(trcode, <span class="string">''</span>, rqname, <span class="number">0</span>, <span class="string">"추정예탁자산"</span>)</span><br><span class="line"></span><br><span class="line">    print(Kiwoom.change_format(total_purchase_price))</span><br><span class="line">    print(Kiwoom.change_format(total_eval_price))</span><br><span class="line">    print(Kiwoom.change_format(total_eval_profit_loss_price))</span><br><span class="line">    print(Kiwoom.change_format(total_earning_rate))</span><br><span class="line">    print(Kiwoom.change_format(estimated_deposit))</span><br></pre></td></tr></table></figure>
+<p><code>_receive_tr_data</code> 메서드에서 <code>_opw00018</code> 메서드를 호출하도록 코드 수정.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> rqname == <span class="string">"opt10081_req"</span>:</span><br><span class="line">    self._opt10081(rqname, trcode)</span><br><span class="line"><span class="keyword">elif</span> rqname == <span class="string">"opw00001_req"</span>:</span><br><span class="line">    self._opw00001(rqname, trcode)</span><br><span class="line"><span class="keyword">elif</span> rqname == <span class="string">"opw0001_req"</span>:</span><br><span class="line">    self._opw00018(rqname, trcode)</span><br></pre></td></tr></table></figure>
+<p><code>opw00018 TR</code>을 통해 싱글 데이터를 잘 얻어오는지 테스트하기 위해 <code>Kiwoom.py</code> 파일의 <code>__main__</code> 코드 부분을 수정.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    kiwoom = Kiwoom()</span><br><span class="line">    kiwoom.comm_connect()</span><br><span class="line"></span><br><span class="line">    account_number = kiwoom.get_login_info(<span class="string">"ACCNO"</span>)</span><br><span class="line">    account_number = account_number.split(<span class="string">';'</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">    kiwoom.set_input_value(<span class="string">"계좌번호"</span>, account_number)</span><br><span class="line">    kiwoom.comm_rq_data(<span class="string">"opw00018_req"</span>, <span class="string">"opw00018"</span>, <span class="number">0</span>, <span class="string">"2000"</span>)</span><br></pre></td></tr></table></figure>
+<p>만약 <code>Kiwoom.py</code> 파일을 실행했을 때 아래와 같은 에러가 발생한다면 계좌 비밀번호 등록한 후 자동 로그인 설정 해줌.</p>
+<p><img src="https://wikidocs.net/images/page/6235/r18.60.png" alt="계좌 비밀번호 에러"></p>
+<p>멀티 데이터를 통해 보유 종목별 평가 잔고 데이터를 가져오기.<br>
+다음 코드를 <code>_opw00018</code>에 추가.<br>
+멀티 데이터는 <code>_get_repeat_cnt</code> 메서드를 호출하여 보유 종목의 개수를 얻어 옴.<br>
+그런 다음 해당 개수마큼 반복하면서 각 보유 종목에 대한 상세 데이터를 <code>_comm_get_data</code>를 통해 얻어 옴.<br>
+참고로 <code>opw00018 TR</code>을 사용하는 경우 한 번의 TR 요청으로 최대 20개의 보유 종목에 대한 데이터를 얻을 수 있음.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># multi data</span></span><br><span class="line">rows = self._get_repeat_cnt(trcode, rqname)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(rows):</span><br><span class="line">    name = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"종목명"</span>)</span><br><span class="line">    quantity = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"보유수량"</span>)</span><br><span class="line">    purchase_price = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"매입가"</span>)</span><br><span class="line">    current_price = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"현재가"</span>)</span><br><span class="line">    eval_profit_loss_price = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"평가손익"</span>)</span><br><span class="line">    earning_rate = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"수익률(%)"</span>)</span><br><span class="line"></span><br><span class="line">    quantity = Kiwoom.change_format(quantity)</span><br><span class="line">    purchase_price = Kiwoom.change_format(purchase_price)</span><br><span class="line">    current_price = Kiwoom.change_format(current_price)</span><br><span class="line">    eval_profit_loss_price = Kiwoom.change_format(eval_profit_loss_price)</span><br><span class="line">    earning_rate = Kiwoom.change_format2(earning_rate)</span><br><span class="line"></span><br><span class="line">    print(name, quantity, purchase_price, current_price, eval_profit_loss_price, earning_rate)</span><br></pre></td></tr></table></figure>
+<p>수익률에 대한 포맷 변경은 <code>change_format2</code>라는 정적 메서드를 사용.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@staticmethod</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">change_format2</span><span class="params">(data)</span>:</span></span><br><span class="line">    strip_data = data.lstrip(<span class="string">'-0'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> strip_data == <span class="string">''</span>:</span><br><span class="line">        strip_data = <span class="string">'0'</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> strip_data.startswith(<span class="string">'.'</span>):</span><br><span class="line">        strip_data = <span class="string">'0'</span> + strip_data</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> data.startswith(<span class="string">'-'</span>):</span><br><span class="line">        strip_data = <span class="string">'-'</span> + strip_data</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> strip_data</span><br></pre></td></tr></table></figure>
+<p><code>opw00018 TR</code>을 통해 얻어온 데이터를 인스턴스 변수에 저장</p>
+<p>Kiwoom 클래스에 다음 메서드 추가</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">reset_opw00018_output</span><span class="params">(self)</span>:</span></span><br><span class="line">    self.opw00018_output = &#123;<span class="string">'single'</span>: [], <span class="string">'multi'</span>: []&#125;</span><br></pre></td></tr></table></figure>
+<p><code>_opw00018</code> 메서드는 아래와 같이 수정.<br>
+싱글 데이터는 1차원 리스트로 데이터를 저장,<br>
+멀티 데이터는 2차원 리스트로 데이터를 저장.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_opw00018</span><span class="params">(self, rqname, trcode)</span>:</span></span><br><span class="line">    <span class="comment"># single data</span></span><br><span class="line">    total_purchase_price = self._comm_get_data(trcode, <span class="string">""</span>, rqname, <span class="number">0</span>, <span class="string">"총매입금액"</span>)</span><br><span class="line">    total_eval_price = self._comm_get_data(trcode, <span class="string">""</span>, rqname, <span class="number">0</span>, <span class="string">"총평가금액"</span>)</span><br><span class="line">    total_eval_profit_loss_price = self._comm_get_data(trcode, <span class="string">""</span>, rqname, <span class="number">0</span>, <span class="string">"총평가손익금액"</span>)</span><br><span class="line">    total_earning_rate = self._comm_get_data(trcode, <span class="string">""</span>, rqname, <span class="number">0</span>, <span class="string">"총수익률(%)"</span>)</span><br><span class="line">    estimated_deposit = self._comm_get_data(trcode, <span class="string">""</span>, rqname, <span class="number">0</span>, <span class="string">"추정예탁자산"</span>)</span><br><span class="line"></span><br><span class="line">    self.opw00018_output[<span class="string">'single'</span>].append(Kiwoom.change_format(total_purchase_price))</span><br><span class="line">    self.opw00018_output[<span class="string">'single'</span>].append(Kiwoom.change_format(total_eval_price))</span><br><span class="line">    self.opw00018_output[<span class="string">'single'</span>].append(Kiwoom.change_format(total_eval_profit_loss_price))</span><br><span class="line">    self.opw00018_output[<span class="string">'single'</span>].append(Kiwoom.change_format(total_earning_rate))</span><br><span class="line">    self.opw00018_output[<span class="string">'single'</span>].append(Kiwoom.change_format(estimated_deposit))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># multi data</span></span><br><span class="line">    rows = self._get_repeat_cnt(trcode, rqname)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(rows):</span><br><span class="line">        name = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"종목명"</span>)</span><br><span class="line">        quantity = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"보유수량"</span>)</span><br><span class="line">        purchase_price = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"매입가"</span>)</span><br><span class="line">        current_price = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"현재가"</span>)</span><br><span class="line">        eval_profit_loss_price = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"평가손익"</span>)</span><br><span class="line">        earning_rate = self._comm_get_data(trcode, <span class="string">""</span>, rqname, i, <span class="string">"수익률(%)"</span>)</span><br><span class="line"></span><br><span class="line">        quantity = Kiwoom.change_format(quantity)</span><br><span class="line">        purchase_price = Kiwoom.change_format(purchase_price)</span><br><span class="line">        current_price = Kiwoom.change_format(current_price)</span><br><span class="line">        eval_profit_loss_price = Kiwoom.change_format(eval_profit_loss_price)</span><br><span class="line">        earning_rate = Kiwoom.change_format2(earning_rate)</span><br><span class="line"></span><br><span class="line">        self.opw00018_output[<span class="string">'multi'</span>].append([name, quantity, purchase_price, current_price, eval_profit_loss_price, earning_rate])</span><br></pre></td></tr></table></figure>
+<p><code>opw00018 TR</code>을 사용할 때 한가지 주의 사항은 실 서버로 접속할 때와 모의투자 서버로 접속할 때에 제공되는 데이터 형식이 다름.<br>
+예를 들어 실 서버에서 수익률은 소수점 표시 없이 전달되지만, 모의투자에선 소수점을 포함해서 데이터가 전달됨.<br>
+따라서 접속 서버를 구분하여 데이터를 다르게 처리해야 할 필요가 있음.<br>
+Kiwoom 클래스에 다음 메서드를 추가</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_server_gubun</span><span class="params">(self)</span>:</span></span><br><span class="line">    ret = self.dynamicCall(<span class="string">"KOA_Functions(QString, QString)"</span>, <span class="string">"GetServerGubun"</span>, <span class="string">""</span>)</span><br><span class="line">    <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure>
+<p><code>_opw00018</code> 메서드에서 모의투자일 때는 <code>총수익률(%)</code>의 값을 100으로 나눈 후 출력 되도록 다음과 같이 코드 수정.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">total_earning_rate = Kiwoom.change_format(total_earning_rate)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> self.get_server_gubun():</span><br><span class="line">    total_earning_rate = float(total_earning_rate) / <span class="number">100</span></span><br><span class="line">    total_earning_rate = str(total_earning_rate)</span><br><span class="line"></span><br><span class="line">self.opw00018_output[<span class="string">'single'</span>].append(total_earning_rate)</span><br></pre></td></tr></table></figure>
+<h3 id="3-pytrader-py-파일-업데이트-v2"><a class="header-anchor" href="#3-pytrader-py-파일-업데이트-v2">¶</a>3) <code>pytrader.py</code> 파일 업데이트</h3>
+<p>Kiwoom 클래스를 사용해 잔고 및 보유종목 현황 데이터를 요청하고 데이터를 UI에 출력하는 코드 작성.</p>
+<p><img src="https://wikidocs.net/images/page/6236/r18.61.png" alt="PyTrader"></p>
+<figure class="highlight python"><figcaption><span>call check_balance</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pushButton_2 라는 객체가 클릭될 때 check_balance라는 메서드가 호출</span></span><br><span class="line">self.pushButton_2.clicked.connect(self.check_balance)</span><br></pre></td></tr></table></figure>
+<p><code>check_balance</code> 메서드 구현.</p>
+<figure class="highlight plain"><figcaption><span>check_balance method</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def check_balance(self):</span><br><span class="line">    self.kiwoom.reset_opw00018_output()</span><br><span class="line">    account_number = self.kiwoom.get_login_info(&quot;ACCNO&quot;)</span><br><span class="line">    account_number = account_number.split(&apos;;&apos;)[0]</span><br><span class="line"></span><br><span class="line">    self.kiwoom.set_input_value(&quot;계좌번호&quot;, account_number)</span><br><span class="line">    self.kiwoom.comm_rq_data(&quot;opw00018_req&quot;, &quot;opw00018&quot;, 0, &quot;2000&quot;)</span><br><span class="line"></span><br><span class="line">    while self.kiwoom.remained_data:</span><br><span class="line">        time.sleep(0.2)</span><br><span class="line">        self.kiwoom.set_input_value(&quot;계좌번호&quot;, account_number)</span><br><span class="line">        self.kiwoom.comm_rq_data(&quot;opw00018_req&quot;, &quot;opw00018&quot;, 2, &quot;2000&quot;)</span><br></pre></td></tr></table></figure>
+<p>예수금 데이터를 얻기 위해 <code>opw00001 TR</code>을 요청하는 코드</p>
+<figure class="highlight plain"><figcaption><span>opw00001 TR을 요청하는 코드</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># opw00001</span><br><span class="line">self.kiwoom.set_input_value(&quot;계좌번호&quot;, account_number)</span><br><span class="line">self.kiwoom.comm_rq_data(&quot;opw00001_req&quot;, &quot;opw00001&quot;, 0, &quot;2000&quot;)</span><br></pre></td></tr></table></figure>
+<p>데이터가 준비됐다면 데이터를 <code>QTableWidget</code> 객체에 출력하면 됨. <code>self.tableWidget</code>을 통해 해당 객체에 접근 가능.</p>
+<p>예수금 데이터를 <code>QTableWidget</code>에 출력하기 위해 먼저 <code>self.kiwoom.d2_deposit</code>에 저장된 예수금 데이터를 <code>QTableWidgetItem</code> 객체로 만들어 줌.<br>
+<code>setItem</code> 메서드를 호출해 <code>QTableWidget</code> 객체에 넣으면 됨.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># balance</span></span><br><span class="line">item = QTableWidgetItem(self.kiwoom.d2_deposit)</span><br><span class="line">item.setTextAlignment(Qt.AlignVCenter | Qt.AlignRight)</span><br><span class="line">self.tableWidget.setItem(<span class="number">0</span>, <span class="number">0</span>, item)</span><br></pre></td></tr></table></figure>
+<p><code>총매입</code>, <code>총평가</code>, <code>총손익</code>, <code>총수익률(%)</code>, <code>추정자산</code>을 <code>QTableWidget</code>의 칼럼에 추가하는 코드.<br>
+데이터는 <code>self.kiwoom.opw00018_output['single']</code>을 통해 얻어올 수 있음.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">6</span>):</span><br><span class="line">    item = QTableWidgetItem(self.kiwoom.opw00018_output[<span class="string">'single'</span>][i - <span class="number">1</span>])</span><br><span class="line">    item.setTextAlignment(QT.AlignVCenter | Qt.AlignRight)</span><br><span class="line">    self.tableWidget.setItem(<span class="number">0</span>, i, item)</span><br></pre></td></tr></table></figure>
+<p><code>resizeRowsToContents</code> 메서드를 호출해서 아이템의 크기에 맞춰 행의 높이를 조절</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.tableWidget.resizeRowsToContents()</span><br></pre></td></tr></table></figure>
+<p>보유 종목별 평가 잔고 데이터를 추가.<br>
+먼저 보유종목의 개수를 확인한 후 행의 개수를 설정</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Item list</span></span><br><span class="line">item_count = len(self.kiwoom.opw00018_output[<span class="string">'multi])</span></span><br><span class="line"><span class="string">self.tableWidget_2.setRowCount(item_count)</span></span><br></pre></td></tr></table></figure>
+<p>한 종목에 대한 종목명, 보유량, 매입가, 현재가, 평가손익, 수익률(%)은 출력</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> range(item_count):</span><br><span class="line">    row = self.kiwoom.opw00018_output[<span class="string">'multi'</span>][j]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(row)):</span><br><span class="line">        item = QTableWidgetItem(row[i])</span><br><span class="line">        item.setTextAlignment(Qt.AlignVCenter | Qt.AlignRight)</span><br><span class="line">        self.tableWidget_2.setItem(j, i, item)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><figcaption><span>check_balance method 전체코드</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_balance</span><span class="params">(self)</span>:</span></span><br><span class="line">    self.kiwoom.reset_opw00018_output()</span><br><span class="line">    account_number = self.kiwoom.get_login_info(<span class="string">"ACCNO"</span>)</span><br><span class="line">    account_number = account_number.split(<span class="string">';'</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">    self.kiwoom.set_input_value(<span class="string">"계좌번호"</span>, account_number)</span><br><span class="line">    self.kiwoom.comm_rq_data(<span class="string">"opw00018_req"</span>, <span class="string">"opw00018"</span>, <span class="number">0</span>, <span class="string">"2000"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> self.kiwoom.remained_data:</span><br><span class="line">        time.sleep(<span class="number">0.2</span>)</span><br><span class="line">        self.kiwoom.set_input_value(<span class="string">"계좌번호"</span>, account_number)</span><br><span class="line">        self.kiwoom.comm_rq_data(<span class="string">"opw00018_req"</span>, <span class="string">"opw00018"</span>, <span class="number">2</span>, <span class="string">"2000"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># opw00001</span></span><br><span class="line">    self.kiwoom.set_input_value(<span class="string">"계좌번호"</span>, account_number)</span><br><span class="line">    self.kiwoom.comm_rq_data(<span class="string">"opw00001_req"</span>, <span class="string">"opw00001"</span>, <span class="number">0</span>, <span class="string">"2000"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># balance</span></span><br><span class="line">    item = QTableWidgetItem(self.kiwoom.d2_deposit)</span><br><span class="line">    item.setTextAlignment(Qt.AlignVCenter | Qt.AlignRight)</span><br><span class="line">    self.tableWidget.setItem(<span class="number">0</span>, <span class="number">0</span>, item)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">6</span>):</span><br><span class="line">        item = QTableWidgetItem(self.kiwoom.opw00018_output[<span class="string">'single'</span>][i - <span class="number">1</span>])</span><br><span class="line">        item.setTextAlignment(Qt.AlignVCenter | Qt.AlignRight)</span><br><span class="line">        self.tableWidget.setItem(<span class="number">0</span>, i, item)</span><br><span class="line"></span><br><span class="line">    self.tableWidget.resizeRowsToContents()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Item list</span></span><br><span class="line">    item_count = len(self.kiwoom.opw00018_output[<span class="string">'multi'</span>])</span><br><span class="line">    self.tableWidget_2.setRowCount(item_count)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(item_count):</span><br><span class="line">        row = self.kiwoom.opw00018_output[<span class="string">'multi'</span>][j]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(row)):</span><br><span class="line">            item = QTableWidgetItem(row[i])</span><br><span class="line">            item.setTextAlignment(Qt.AlignVCenter | Qt.AlignRight)</span><br><span class="line">            self.tableWidget_2.setItem(j, i, item)</span><br><span class="line"></span><br><span class="line">    self.tableWidget_2.resizeRowsToContents()</span><br></pre></td></tr></table></figure>
+<p><code>실시간 조회</code> 체크 박스 구현.</p>
+<p>새로운 타이머 객체를 생성</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Timer2</span></span><br><span class="line">self.timer2 = QTimer(self)</span><br><span class="line">self.timer2.start(<span class="number">1000</span>*<span class="number">10</span>)</span><br><span class="line">self.timer2.timeout.connect(self.timeout2)</span><br></pre></td></tr></table></figure>
+<p><code>timeout2</code> 메서드 구현.<br>
+위의 메서드는 <code>QCheckBox</code>가 체크 됐는지 확인한 후 데이터 갱신.<br>
+데이터 갱신 처리는 <code>check_balance</code> 메서드가 담당하고 있으므로 다음과 같이 구현</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">timeout2</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> self.checkBox.isChecked():</span><br><span class="line">        self.check_balance()</span><br></pre></td></tr></table></figure>
+<h2 id="4일차"><a class="header-anchor" href="#4일차">¶</a>4일차</h2>
+<p>선정된 매수/매도 종목을 자동으로 매매하고 해당 종목에 대한 정보를 출력하는 기능 구현.</p>
+<p><img src="https://wikidocs.net/images/page/6315/r18.64.png" alt="개발 4일차 실행 화면"></p>
+<h3 id="1-ui-구성-및-매수-매도-목록-파일-생성"><a class="header-anchor" href="#1-ui-구성-및-매수-매도-목록-파일-생성">¶</a>1) UI 구성 및 매수/매도 목록 파일 생성</h3>
+<p><img src="https://wikidocs.net/images/page/6316/r18.65.png" alt="칼럼추가"></p>
+<p>선정된 매수/매도 종목에 대한 정보가 이미 <code>buy_list.txt</code>라는 파일과 <code>sell_list.txt</code>라는 파일로 저장돼 있다고 가정하고 프로그램을 구현.</p>
+<p><img src="https://wikidocs.net/images/page/6316/r18.66.png" alt="선정된 매수 종목 정보"></p>
+<p><img src="https://wikidocs.net/images/page/6316/r18.67.png" alt="선정된 매도 종목 정보"></p>
+<h3 id="2-선정-종목-정보-출력하기"><a class="header-anchor" href="#2-선정-종목-정보-출력하기">¶</a>2) 선정 종목 정보 출력하기</h3>
+<p>위에서 생성했던 <code>buy_list.txt</code>와 <code>sell_list.txt</code> 파일을 읽어서 이름 <code>QTableWidget</code> 객체로 출력하는 기능을 구현.<br>
+출력하는 기능은 <code>load_buy_sell_list</code>라는 이름의 메서드로 구현할 것임.<br>
+프로그램 시작되자마자 출력돼야 하므로 <code>MyWindow</code> 클래스의 생성자에서 <code>load_buy_sell_list</code>를 호출.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow, form_class)</span>:</span></span><br><span class="line">    sef __init__(self):</span><br><span class="line">        super().__init__()</span><br><span class="line">        self.setupUi(self)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 중간 코드 생략</span></span><br><span class="line">        self.load_buy_sell_list()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><figcaption><span>load_buy_sell_list method</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_buy_sell_list</span><span class="params">(self)</span>:</span></span><br><span class="line">    f = open(<span class="string">"buy_list.txt"</span>, <span class="string">'rt'</span>)</span><br><span class="line">    buy_list = f.readlines()</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line">    f = open(<span class="string">"sell_list.txt"</span>, <span class="string">'rt'</span>)</span><br><span class="line">    sell_list = f.readlines()</span><br><span class="line">    f.close()</span><br></pre></td></tr></table></figure>
+<p>파일로부터 매수/매도 리스트를 읽었다면 데이터의 총 개수를 확인하여 종목 각각에 대한 데이터 개수를 확인한 후 이 두 값을 더한 값을 <code>QTableWidget</code> 객체의 <code>setRowCount</code> 메서드로 설정.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">row_count = len(buy_list) + len(sell_list)</span><br><span class="line">self.tablewidget_4.setRowCount(row_count)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># buy list</span></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> range(len(buy_list)):</span><br><span class="line">    row_data = buy_list[j]</span><br><span class="line">    split_row_data = row_data.split(<span class="string">';'</span>)</span><br><span class="line">    split_row_data[<span class="number">1</span>] = self.kiwoom.get_master_code_name(split_row_data[<span class="number">1</span>].rsplit())</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(split_row_data)):</span><br><span class="line">        item = QTableWidgetItem(split_row_data[i].rstrip())</span><br><span class="line">        item.setTextAlignment(Qt.AlignVCenter | Qt.AlignCenter)</span><br><span class="line">        self.tableWidget_4.setItem(j, i, item)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sell list</span></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> range(len(sell_list)):</span><br><span class="line">    row_data = sell_list[j]</span><br><span class="line">    split_row_data = row_data.split(<span class="string">';'</span>)</span><br><span class="line">    split_row_data[<span class="number">1</span>] = self.kiwoom.get_master_code_name(split_row_data[<span class="number">1</span>].rstrip())</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(split_row_data)):</span><br><span class="line">        item = QTableWidgetItem(split_row_data[i].rstrip())</span><br><span class="line">        item.setTextAlignment(Qt.AlignVCenter | Qt.AlignCenter)</span><br><span class="line">        self.tableWidget_4.setItem(len(buy_list) + j, i, item)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>load_buy_sell_list method 전체코드</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">def load_buy_sell_list(self):</span><br><span class="line">    f = open(&quot;buy_list.txt&quot;, &apos;rt&apos;)</span><br><span class="line">    buy_list = f.readlines()</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line">    f = open(&quot;sell_list.txt&quot;, &apos;rt&apos;)</span><br><span class="line">    sell_list = f.readlines()</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line">    row_count = len(buy_list) + len(sell_list)</span><br><span class="line">    self.tableWidget_4.setRowCount(row_count)</span><br><span class="line"></span><br><span class="line">    # buy list</span><br><span class="line">    for j in range(len(buy_list)):</span><br><span class="line">        row_data = buy_list[j]</span><br><span class="line">        split_row_data = row_data.split(&apos;;&apos;)</span><br><span class="line">        split_row_data[1] = self.kiwoom.get_master_code_name(split_row_data[1].rsplit())</span><br><span class="line"></span><br><span class="line">        for i in range(len(split_row_data)):</span><br><span class="line">            item = QTableWidgetItem(split_row_data[i].rstrip())</span><br><span class="line">            item.setTextAlignment(Qt.AlignVCenter | Qt.AlignCenter)</span><br><span class="line">            self.tableWidget_4.setItem(j, i, item)</span><br><span class="line"></span><br><span class="line">    # sell list</span><br><span class="line">    for j in range(len(sell_list)):</span><br><span class="line">        row_data = sell_list[j]</span><br><span class="line">        split_row_data = row_data.split(&apos;;&apos;)</span><br><span class="line">        split_row_data[1] = self.kiwoom.get_master_code_name(split_row_data[1].rstrip())</span><br><span class="line"></span><br><span class="line">        for i in range(len(split_row_data)):</span><br><span class="line">            item = QTableWidgetItem(split_row_data[i].rstrip())</span><br><span class="line">            item.setTextAlignment(Qt.AlignVCenter | Qt.AlignCenter)</span><br><span class="line">            self.tableWidget_4.setItem(len(buy_list) + j, i, item)</span><br><span class="line"></span><br><span class="line">    self.tableWidget_4.resizeRowsToContents()</span><br></pre></td></tr></table></figure>
+<h3 id="3-자동-주문-구현하기"><a class="header-anchor" href="#3-자동-주문-구현하기">¶</a>3) 자동 주문 구현하기</h3>
+<p>각 거래일의 장 시작에 맞춰 정해진 주문 방식에 따라 주문을 수행하는 간단한 방식을 사용.</p>
+<p>자동 주문하는 기능은 <code>MyWindow 클래스</code>의 <code>trade_stocks</code> 메서드에 구현.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">trade_stocks</span><span class="params">(self)</span>:</span></span><br><span class="line">    hoga_lookup = &#123;<span class="string">'지정가'</span>: <span class="string">"00"</span>, <span class="string">'시장가'</span>: <span class="string">"03"</span>&#125;</span><br><span class="line"></span><br><span class="line">    f = open(<span class="string">"buy_list.txt"</span>, <span class="string">'rt'</span>)</span><br><span class="line">    buy_list = f.readlines()</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line">    f = oepn(<span class="string">"sell_list.txt"</span>, <span class="string">'rt'</span>)</span><br><span class="line">    sell_list = f.readlines()</span><br><span class="line">    f.close()</span><br></pre></td></tr></table></figure>
+<p>주문할 때 필요한 계좌 정보를 <code>QComboBox</code> 위젯으로부터 얻어 옴.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">account = self.comboBox.currentText()</span><br></pre></td></tr></table></figure>
+<p><code>buy_list</code>로 부터 데이터를 하나씩 얻어온 후 문자열을 분리해서 주문에 필요한 정보(거래구분, 종목코드, 수량, 가격)를 준비.<br>
+읽어 온 데이터의 주문 수행 여부가 '매수전’인 경우에만 해당 주문 데이터를 토대로 <code>send_order</code> 메서드를 통해 매수 주문을 수행.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># buy list</span></span><br><span class="line"><span class="keyword">for</span> row_data <span class="keyword">in</span> buy_list:</span><br><span class="line">    split_row_data = row_data.split(<span class="string">';'</span>)</span><br><span class="line">    hoga = split_row_data[<span class="number">2</span>]</span><br><span class="line">    code = split_row_data[<span class="number">1</span>]</span><br><span class="line">    num = split_row_data[<span class="number">3</span>]</span><br><span class="line">    price = split_row_data[<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> split_row_data[<span class="number">-1</span>].rstrip() == <span class="string">'매수전'</span>:</span><br><span class="line">        self.kiwoom.send_order(<span class="string">"send_order_req"</span>, <span class="string">"0101"</span>, account, <span class="number">1</span>, code, num, price, hoga_lookup[hoga], <span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+<p>매도 주문 역시 동일한 방식으로 처리</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sell list</span></span><br><span class="line"><span class="keyword">for</span> row_data <span class="keyword">in</span> sell_list:</span><br><span class="line">    split_row_data = row_data.split(<span class="string">';'</span>)</span><br><span class="line">    hoga = split_row_data[<span class="number">2</span>]</span><br><span class="line">    code = split_row_data[<span class="number">1</span>]</span><br><span class="line">    num = split_row_data[<span class="number">3</span>]</span><br><span class="line">    price = split_row_data[<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> split_row_data[<span class="number">-1</span>].rstrip() == <span class="string">'매도전'</span>:</span><br><span class="line">        self.kiwoom.send_order(<span class="string">"send_order_req"</span>, <span class="string">"0101"</span>, account, <span class="number">2</span>, code, num, price, hoga_lookup[hoga], <span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+<p>매매 주문이 완료되면 <code>buy_list.txt</code>에 저장된 주문 여부를 업데이트.<br>
+앞서 매매 주문을 실행했기 때문에 <code>매수전</code>과 <code>매도전</code>을 <code>주문완료</code>로 변경.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># buy list</span></span><br><span class="line"><span class="keyword">for</span> i, row_data <span class="keyword">in</span> enumerate(buy_list):</span><br><span class="line">    buy_list[i] = buy_list[i].replace(<span class="string">"매수전"</span>, <span class="string">"주문완료"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># file update</span></span><br><span class="line">f = open(<span class="string">"buy_list.txt"</span>, <span class="string">'wt'</span>)</span><br><span class="line"><span class="keyword">for</span> row_data <span class="keyword">in</span> buy_list:</span><br><span class="line">    f.write(row_data)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><figcaption><span>trade_stocks 전체코드</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">trade_stocks</span><span class="params">(self)</span>:</span></span><br><span class="line">    hoga_lookup = &#123;<span class="string">'지정가'</span>: <span class="string">"00"</span>, <span class="string">'시장가'</span>: <span class="string">"03"</span>&#125;</span><br><span class="line"></span><br><span class="line">    f = open(<span class="string">"buy_list.txt"</span>, <span class="string">'rt'</span>)</span><br><span class="line">    buy_list = f.readlines()</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line">    f = open(<span class="string">"sell_list.txt"</span>, <span class="string">'rt'</span>)</span><br><span class="line">    sell_list = f.readlines()</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># account</span></span><br><span class="line">    account = self.comboBox.currentText()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># buy list</span></span><br><span class="line">    <span class="keyword">for</span> row_data <span class="keyword">in</span> buy_list:</span><br><span class="line">        split_row_data = row_data.split(<span class="string">';'</span>)</span><br><span class="line">        hoga = split_row_data[<span class="number">2</span>]</span><br><span class="line">        code = split_row_data[<span class="number">1</span>]</span><br><span class="line">        num = split_row_data[<span class="number">3</span>]</span><br><span class="line">        price = split_row_data[<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> split_row_data[<span class="number">-1</span>].rstrip() == <span class="string">'매수전'</span>:</span><br><span class="line">            self.kiwoom.send_order(<span class="string">"send_order_req"</span>, <span class="string">"0101"</span>, account, <span class="number">1</span>, code, num, price,</span><br><span class="line">hoga_lookup[hoga], <span class="string">""</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># sell list</span></span><br><span class="line">    <span class="keyword">for</span> row_data <span class="keyword">in</span> sell_list:</span><br><span class="line">        split_row_data = row_data.split(<span class="string">';'</span>)</span><br><span class="line">        hoga = split_row_data[<span class="number">2</span>]</span><br><span class="line">        code = split_row_data[<span class="number">1</span>]</span><br><span class="line">        num = split_row_data[<span class="number">3</span>]</span><br><span class="line">        price = split_row_data[<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> split_row_data[<span class="number">-1</span>].rstrip() == <span class="string">'매도전'</span>:</span><br><span class="line">            self.kiwoom.send_order(<span class="string">"send_order_req"</span>, <span class="string">"0101"</span>, account, <span class="number">2</span>, code, num, price,</span><br><span class="line">hoga_lookup[hoga], <span class="string">""</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># buy list</span></span><br><span class="line">    <span class="keyword">for</span> i, row_data <span class="keyword">in</span> enumerate(buy_list):</span><br><span class="line">        buy_list[i] = buy_list[i].replace(<span class="string">"매수전"</span>, <span class="string">"주문완료"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># file update</span></span><br><span class="line">    f = open(<span class="string">"buy_list.txt"</span>, <span class="string">'wt'</span>)</span><br><span class="line">    <span class="keyword">for</span> row_data <span class="keyword">in</span> buy_list:</span><br><span class="line">        f.write(row_data)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># sell list</span></span><br><span class="line">    <span class="keyword">for</span> i, row_data <span class="keyword">in</span> enumerate(sell_list):</span><br><span class="line">        sell_list[i] = sell_list[i].replace(<span class="string">"매도전"</span>, <span class="string">"주문완료"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># file update</span></span><br><span class="line">    f = open(<span class="string">"sell_list.txt"</span>, <span class="string">'wt'</span>)</span><br><span class="line">    <span class="keyword">for</span> row_data <span class="keyword">in</span> sell_list:</span><br><span class="line">        f.write(row_data)</span><br><span class="line">    f.close()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>timeout method</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">def timeout(self):</span><br><span class="line">    market_start_time = QTime(9, 0, 0)</span><br><span class="line">    current_time = QTime.currentTime()</span><br><span class="line"></span><br><span class="line">    if current_time &gt; market_start_time and self.trade_stocks_done is False:</span><br><span class="line">        self.trade_stocks()</span><br><span class="line">        self.trade_stocks_done = True</span><br><span class="line"></span><br><span class="line">    text_time = current_time.toString(&quot;hh:mm:ss&quot;)</span><br><span class="line">    time_msg = &quot;현재시간: &quot; + text_time</span><br><span class="line"></span><br><span class="line">    state = self.kiwoom.get_connect_state()</span><br><span class="line">    if state == 1:</span><br><span class="line">        state_msg = &quot;서버 연결 중&quot;</span><br><span class="line">    else:</span><br><span class="line">        state_msg = &quot;서버 미 연결 중&quot;</span><br><span class="line"></span><br><span class="line">    self.statusbar.showMessage(state_msg + &quot; | &quot; + time_msg)</span><br></pre></td></tr></table></figure>
+<p><code>MyWindow</code> 클래스의 생성자에 <code>trade_stocks_done</code> 속성을 추가.<br>
+참고로 <code>trade_stocks_done</code>은 생성자에게 <code>Qtimer</code> 객체를 생성하는 코드보다 먼저 위치해야 함.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow, form_class)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        self.setupUi(self)</span><br><span class="line"></span><br><span class="line">        self.trade_stocks_done = <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<h2 id="link"><a class="header-anchor" href="#link">¶</a>Link</h2>
+<p><a href="https://wikidocs.net/book/110" target="_blank" rel="external">파이썬으로 배우는 알고리즘 트레이딩</a></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://ultrasound.github.io2017/11/21/python-trading-system/" data-id="cja95hj8r000emkv3skswlqgr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ultrasound" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://www.instagram.com/ultrasound2k/" target="_blank">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://www.linkedin.com/in/ultrasound2k" target="_blank">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="../../../../index.html" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="../../12/hexo-tag-plugins-test/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">hexo tag plugins test</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></p>
+                            <p class="item-title"><a href="" class="title">python trading system</a></p>
+                            <p class="item-date"><time datetime="2017-11-21T04:55:01.953Z" itemprop="datePublished">2017-11-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="../../12/hexo-tag-plugins-test/" class="title">hexo tag plugins test</a></p>
+                            <p class="item-date"><time datetime="2017-11-12T05:32:33.232Z" itemprop="datePublished">2017-11-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="../../../../categories/software-development-process/">Software Development Process</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a></p>
+                            <p class="item-title"><a href="../../10/test-driven-development-with-python/" class="title">Test Driven Development with Python</a></p>
+                            <p class="item-date"><time datetime="2017-11-10T11:57:00.067Z" itemprop="datePublished">2017-11-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="../../10/hello-world/" class="title">Hello World</a></p>
+                            <p class="item-date"><time datetime="2017-11-10T11:57:00.061Z" itemprop="datePublished">2017-11-10</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/11/">November 2017</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tdd/">TDD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/kiwoom/">kiwoom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/python/">python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/trading/">trading</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="../../../../tags/tdd/" style="font-size: 10px;">TDD</a> <a href="../../../../tags/kiwoom/" style="font-size: 10px;">kiwoom</a> <a href="../../../../tags/python/" style="font-size: 20px;">python</a> <a href="../../../../tags/trading/" style="font-size: 10px;">trading</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://wikidocs.net/book/110">Python Trading</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="../../../../index.html" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Hyogeun Kim</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'ultrasound-github-io';
+    
+    
+    var disqus_url = 'https://ultrasound.github.io2017/11/21/python-trading-system/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="../../../../libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="../../../../libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="../../../../js/main.js"></script>
+
+    </div>
+</body>
+</html>
