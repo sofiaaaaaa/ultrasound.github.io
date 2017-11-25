@@ -7,21 +7,21 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="kiwoom,python,trading" />
+        <meta name="keywords" content="python,kiwoom,trading" />
     
-    <meta name="description" content="¶요구 사항  Anaconda - Python 3.5 32 bit Pycharm IDE는 항상 관리자 권한으로 실행. 키움증권 계좌 개설 키움증권 OpenAPI+ 신청 KOA Studio  ¶사전 작업  Anaconda 32bit 설치 Python 3.5 사용 환경 만들기 - conda install -c anaconda python35 번개 HTS 설치.">
-<meta name="keywords" content="kiwoom,python,trading">
+    <meta name="description" content="개발 1일차 개발 2일차 개발 3일차 개발 4일차 ¶요구 사항  Anaconda - Python 3.5 32 bit Pycharm IDE는 항상 관리자 권한으로 실행. 키움증권 계좌 개설 키움증권 OpenAPI+ 신청 KOA Studio  ¶사전 작업  Anaconda 32bit 설치 Python 3.5 사용 환경 만들기 - conda install -c">
+<meta name="keywords" content="python,kiwoom,trading">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python trading system">
 <meta property="og:url" content="https://ultrasound.github.io/2017/11/21/python-trading-system/index.html">
 <meta property="og:site_name" content="Just Fucking Do It!!!">
-<meta property="og:description" content="¶요구 사항  Anaconda - Python 3.5 32 bit Pycharm IDE는 항상 관리자 권한으로 실행. 키움증권 계좌 개설 키움증권 OpenAPI+ 신청 KOA Studio  ¶사전 작업  Anaconda 32bit 설치 Python 3.5 사용 환경 만들기 - conda install -c anaconda python35 번개 HTS 설치.">
+<meta property="og:description" content="개발 1일차 개발 2일차 개발 3일차 개발 4일차 ¶요구 사항  Anaconda - Python 3.5 32 bit Pycharm IDE는 항상 관리자 권한으로 실행. 키움증권 계좌 개설 키움증권 OpenAPI+ 신청 KOA Studio  ¶사전 작업  Anaconda 32bit 설치 Python 3.5 사용 환경 만들기 - conda install -c">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://wikidocs.net/images/page/5856/r18.02.png">
 <meta property="og:updated_time" content="2017-11-21T04:57:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python trading system">
-<meta name="twitter:description" content="¶요구 사항  Anaconda - Python 3.5 32 bit Pycharm IDE는 항상 관리자 권한으로 실행. 키움증권 계좌 개설 키움증권 OpenAPI+ 신청 KOA Studio  ¶사전 작업  Anaconda 32bit 설치 Python 3.5 사용 환경 만들기 - conda install -c anaconda python35 번개 HTS 설치.">
+<meta name="twitter:description" content="개발 1일차 개발 2일차 개발 3일차 개발 4일차 ¶요구 사항  Anaconda - Python 3.5 32 bit Pycharm IDE는 항상 관리자 권한으로 실행. 키움증권 계좌 개설 키움증권 OpenAPI+ 신청 KOA Studio  ¶사전 작업  Anaconda 32bit 설치 Python 3.5 사용 환경 만들기 - conda install -c">
 <meta name="twitter:image" content="https://wikidocs.net/images/page/5856/r18.02.png">
     
 
@@ -178,7 +178,11 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="요구-사항"><a class="header-anchor" href="#요구-사항">¶</a>요구 사항</h2>
+            <p><a href="#%EA%B0%9C%EB%B0%9C-1%EC%9D%BC%EC%B0%A8">개발 1일차</a></p>
+<p><a href="#%EA%B0%9C%EB%B0%9C-2%EC%9D%BC%EC%B0%A8">개발 2일차</a></p>
+<p><a href="#%EA%B0%9C%EB%B0%9C-3%EC%9D%BC%EC%B0%A8">개발 3일차</a></p>
+<p><a href="#%EA%B0%9C%EB%B0%9C-4%EC%9D%BC%EC%B0%A8">개발 4일차</a></p>
+<h2 id="요구-사항"><a class="header-anchor" href="#요구-사항">¶</a>요구 사항</h2>
 <ol>
 <li>Anaconda - Python 3.5 32 bit</li>
 <li><code>Pycharm IDE</code>는 항상 <code>관리자 권한</code>으로 실행.</li>
@@ -190,6 +194,7 @@ ga('send', 'pageview');
 <ol>
 <li><a href="https://www.anaconda.com/download/" target="_blank" rel="external">Anaconda</a> 32bit 설치</li>
 <li>Python 3.5 사용 환경 만들기 - <code>conda install -c anaconda python35</code></li>
+<li><code>pip insall anaconda=4.4.0</code></li>
 <li>번개 HTS 설치.</li>
 <li><code>키움 Open API+</code> 설치.</li>
 </ol>
@@ -310,7 +315,7 @@ UI는 <code>Qt Designer</code>를 사용해 <code>pytrader.ui</code> 파일에 �
 <p>주문과 관련된 API를 처리하는 메서드를 구현.<br>
 <a href="../kiwoom-method/#sendorder">SendOrder</a> 메서드를 사용하면 주식 주문에 대한 정보를 서버로 전송.</p>
 <p>주문이 체결되면 증권사 서버는 아래와 같이 <code>OnReceiveChejanData</code>라는 이벤트를 발생.</p>
-<p>앞서 <code>OnReceiveTrData</code> 메서드 내에서 <code>CommGetData</code> 메서드를 호출해 데이터를 얻어왔던 것과 동일하게 체결과 관련해서는 <code>OnReceiveChejanData</code>라는 메서드 내에서 <code>GetChejanData</code>라는 메서드를 호출해서 체결잔고 데이터를 얻어 옴.</p>
+<p>앞서 <a href="../kiwoom-md/#OnReceiveTrData">OnReceiveTrData</a> 메서드 내에서 <code>CommGetData</code> 메서드를 호출해 데이터를 얻어왔던 것과 동일하게 체결과 관련해서는 <code>OnReceiveChejanData</code>라는 메서드 내에서 <code>GetChejanData</code>라는 메서드를 호출해서 체결잔고 데이터를 얻어 옴.</p>
 <img src="/2017/11/21/python-trading-system/JumunAPI_workflow.png">
 <p>Kiwoom 클래스에 <code>send_order</code> 메서드를 추가</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">send_order</span><span class="params">(self, rqname, screen_no, acc_no, order_type, code, quantity, price, hoga, order_no)</span>:</span></span><br><span class="line">    self.dynamicCall(<span class="string">"SendOrder(QString, QString, QString, int, QString, int, int, QString, QString)"</span>,</span><br><span class="line">                     [rqname, screen_no, acc_no, order_type, code, quantity, price, hoga, order_no])</span><br></pre></td></tr></table></figure>
@@ -446,6 +451,14 @@ Kiwoom 클래스의 <code>get_login_info</code> 메서드를 사용하여 다음
 <img src="/2017/11/21/python-trading-system/tr_request_workflow.png">
 <p>먼저 <a href="../kiwoom-md/#OnReceiveTrData">OnReceiveTrData</a> 이벤트가 발생할 때 수신 데이터를 가져오는 함수인 <code>_opw0001</code>를 Kiwoom 클래스에 추가.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_opw00001</span><span class="params">(self, rqname, trcode)</span>:</span></span><br><span class="line">    self.d2_deposit = self._comm_get_data(trcode, <span class="string">""</span>, rqname, <span class="number">0</span>, <span class="string">"d+2추정예수금"</span>)</span><br></pre></td></tr></table></figure>
+<blockquote><p><code>_receive_tr_data</code> 메서드를 구현할 때 다음 세가지 고려 사항</p>
+<ol>
+<li>여러 종류의 TR을 요청해도 모두 <code>_receive_tr_data</code> 메서드 내에서 처리해야 함.<br>
+따라서 <code>rqname</code>이라는 인자를 통해서 요청한 TR을 구분한 후 TR에 따라서 적당한 데이터를 가져오도록 코딩.</li>
+<li>연속조회에 대한 처리.</li>
+<li>이벤트 루프에 대한 처리.</li>
+</ol>
+</blockquote>
 <p><code>_receive_tr_data</code> 메서드에서 <code>_opw00001</code> 메서드를 호출하도록 코드 수정.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> rqname == <span class="string">"opt10081_req"</span>:</span><br><span class="line">    self._opt10081(rqname, trcode)</span><br><span class="line"></span><br><span class="line"><span class="keyword">elif</span> rqname == <span class="string">"opw00001_req"</span>:</span><br><span class="line">    self._opw00001(rqname, trcode)</span><br></pre></td></tr></table></figure>
 <p><code>d+2 추정예수금</code>을 잘 얻어오는지 확인하기 위해 <code>Kiwoom.py</code> 파을이 <code>main</code> 코드 부분을 아래와 같이 수정.</p>
@@ -518,7 +531,7 @@ Kiwoom 클래스에 다음 메서드를 추가</p>
 위의 메서드는 <code>QCheckBox</code>가 체크 됐는지 확인한 후 데이터 갱신.<br>
 데이터 갱신 처리는 <code>check_balance</code> 메서드가 담당하고 있으므로 다음과 같이 구현</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">timeout2</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> self.checkBox.isChecked():</span><br><span class="line">        self.check_balance()</span><br></pre></td></tr></table></figure>
-<h2 id="4일차"><a class="header-anchor" href="#4일차">¶</a>4일차</h2>
+<h2 id="개발-4일차"><a class="header-anchor" href="#개발-4일차">¶</a>개발 4일차</h2>
 <p>선정된 매수/매도 종목을 자동으로 매매하고 해당 종목에 대한 정보를 출력하는 기능 구현.</p>
 <p><img src="https://wikidocs.net/images/page/6315/r18.64.png" alt="개발 4일차 실행 화면"></p>
 <h3 id="1-ui-구성-및-매수-매도-목록-파일-생성"><a class="header-anchor" href="#1-ui-구성-및-매수-매도-목록-파일-생성">¶</a>1) UI 구성 및 매수/매도 목록 파일 생성</h3>
@@ -565,7 +578,7 @@ Kiwoom 클래스에 다음 메서드를 추가</p>
 
 
 
-    <a data-url="https://ultrasound.github.io2017/11/21/python-trading-system/" data-id="cja98ydmd0007bwv3rabvfeq7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://ultrasound.github.io2017/11/21/python-trading-system/" data-id="cjafc26x6001iekv3pq50lim1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -728,7 +741,7 @@ Kiwoom 클래스에 다음 메서드를 추가</p>
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></p>
-                            <p class="item-title"><a href="../kiwoom-tr/" class="title">kiwoom TR</a></p>
+                            <p class="item-title"><a href="../kiwoom-tr-and-fid/" class="title">kiwoom TR and FID</a></p>
                             <p class="item-date"><time datetime="2017-11-21T06:30:35.204Z" itemprop="datePublished">2017-11-21</time></p>
                         </div>
                     </li>
@@ -789,7 +802,7 @@ Kiwoom 클래스에 다음 메서드를 추가</p>
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/api/">API</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tdd/">TDD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tr/">TR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/kiwoom/">kiwoom</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/trading/">trading</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/api/">API</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/fid/">FID</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tdd/">TDD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tr/">TR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/kiwoom/">kiwoom</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/trading/">trading</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -799,7 +812,7 @@ Kiwoom 클래스에 다음 메서드를 추가</p>
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="../../../../tags/api/" style="font-size: 10px;">API</a> <a href="../../../../tags/tdd/" style="font-size: 10px;">TDD</a> <a href="../../../../tags/tr/" style="font-size: 10px;">TR</a> <a href="../../../../tags/kiwoom/" style="font-size: 20px;">kiwoom</a> <a href="../../../../tags/python/" style="font-size: 16.67px;">python</a> <a href="../../../../tags/trading/" style="font-size: 13.33px;">trading</a>
+            <a href="../../../../tags/api/" style="font-size: 10px;">API</a> <a href="../../../../tags/fid/" style="font-size: 10px;">FID</a> <a href="../../../../tags/tdd/" style="font-size: 10px;">TDD</a> <a href="../../../../tags/tr/" style="font-size: 10px;">TR</a> <a href="../../../../tags/kiwoom/" style="font-size: 20px;">kiwoom</a> <a href="../../../../tags/python/" style="font-size: 16.67px;">python</a> <a href="../../../../tags/trading/" style="font-size: 13.33px;">trading</a>
         </div>
     </div>
 
