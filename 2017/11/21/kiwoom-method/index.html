@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="python,kiwoom,trading" />
     
-    <meta name="description" content="¶CommConnect  CommConnect 메서드는 인자를 갖지 않으며 반환 값을 통해 로그인 성공 여부를 확인. 1self.kiwoom.dynamicCall(&quot;CommConnect()&quot;) ¶CommRqData  Trand을 서버로 송신 ¶GetConnectState  현재 접속 상태를 반환하는 메서드 메서드의 리턴 값을 확인함으로 서버 접속 상태를 확">
+    <meta name="description" content="¶CommConnect  CommConnect 메서드는 인자를 갖지 않으며 반환 값을 통해 로그인 성공 여부를 확인. 1self.kiwoom.dynamicCall(&quot;CommConnect()&quot;) ¶CommRqData  TR을 서버로 송신 ¶GetConnectState  현재 접속 상태를 반환하는 메서드 메서드의 리턴 값을 확인함으로 서버 접속 상태를 확인 가">
 <meta name="keywords" content="python,kiwoom,trading">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kiwoom method">
 <meta property="og:url" content="https://ultrasound.github.io/2017/11/21/kiwoom-method/index.html">
 <meta property="og:site_name" content="Just Fucking Do It!!!">
-<meta property="og:description" content="¶CommConnect  CommConnect 메서드는 인자를 갖지 않으며 반환 값을 통해 로그인 성공 여부를 확인. 1self.kiwoom.dynamicCall(&quot;CommConnect()&quot;) ¶CommRqData  Trand을 서버로 송신 ¶GetConnectState  현재 접속 상태를 반환하는 메서드 메서드의 리턴 값을 확인함으로 서버 접속 상태를 확">
+<meta property="og:description" content="¶CommConnect  CommConnect 메서드는 인자를 갖지 않으며 반환 값을 통해 로그인 성공 여부를 확인. 1self.kiwoom.dynamicCall(&quot;CommConnect()&quot;) ¶CommRqData  TR을 서버로 송신 ¶GetConnectState  현재 접속 상태를 반환하는 메서드 메서드의 리턴 값을 확인함으로 서버 접속 상태를 확인 가">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://ultrasound.github.io/2017/11/21/kiwoom-method/CommConnect.png">
 <meta property="og:updated_time" content="2017-11-13T00:43:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kiwoom method">
-<meta name="twitter:description" content="¶CommConnect  CommConnect 메서드는 인자를 갖지 않으며 반환 값을 통해 로그인 성공 여부를 확인. 1self.kiwoom.dynamicCall(&quot;CommConnect()&quot;) ¶CommRqData  Trand을 서버로 송신 ¶GetConnectState  현재 접속 상태를 반환하는 메서드 메서드의 리턴 값을 확인함으로 서버 접속 상태를 확">
+<meta name="twitter:description" content="¶CommConnect  CommConnect 메서드는 인자를 갖지 않으며 반환 값을 통해 로그인 성공 여부를 확인. 1self.kiwoom.dynamicCall(&quot;CommConnect()&quot;) ¶CommRqData  TR을 서버로 송신 ¶GetConnectState  현재 접속 상태를 반환하는 메서드 메서드의 리턴 값을 확인함으로 서버 접속 상태를 확인 가">
 <meta name="twitter:image" content="https://ultrasound.github.io/2017/11/21/kiwoom-method/CommConnect.png">
     
 
@@ -183,8 +183,8 @@ ga('send', 'pageview');
 <p><code>CommConnect</code> 메서드는 인자를 갖지 않으며 반환 값을 통해 로그인 성공 여부를 확인.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.kiwoom.dynamicCall(<span class="string">"CommConnect()"</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="commrqdata"><a class="header-anchor" href="#commrqdata">¶</a>CommRqData</h2>
-
-<p>Trand을 서버로 송신</p>
+<img src="/2017/11/21/kiwoom-method/CommRqData.png">
+<p>TR을 서버로 송신</p>
 <h2 id="getconnectstate"><a class="header-anchor" href="#getconnectstate">¶</a>GetConnectState</h2>
 <img src="/2017/11/21/kiwoom-method/GetConnectState.png">
 <p>현재 접속 상태를 반환하는 메서드<br>
@@ -202,7 +202,7 @@ ga('send', 'pageview');
 이벤트는 총 9개의 인자가 전달됨.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">receive_trdata</span><span class="params">(self, screen_no, rqname, trcode, recordname, prev_next, data_len, err_code, msg1, msg2)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
 <h2 id="onreceiverealdata"><a class="header-anchor" href="#onreceiverealdata">¶</a>OnReceiveRealData</h2>
-
+<img src="/2017/11/21/kiwoom-method/OnReceiveRealData.png">
 <h2 id="onreceivechejandata"><a class="header-anchor" href="#onreceivechejandata">¶</a>OnReceiveChejanData</h2>
 <img src="/2017/11/21/kiwoom-method/OnReceiveChejanData.png">
 <p>체결 데이터를 받은 시점을 알려준다.</p>
@@ -218,7 +218,7 @@ ga('send', 'pageview');
 어떤 <code>TR</code> 요청에 의해 <code>OnReceiveTrData</code> 이벤트가 발생했는지를 확인하기 위해 먼저 사용자 <code>Request 명(rqname)</code>을 확인.<br>
 앞서 <code>CommRqData</code>를 통해 서버에 <code>TR</code>을 송신 할 때 <code>Request</code> 명으로 <code>opt10001_req</code>을 설정했으므로 <code>receive_trdata</code> 메서드에서는 <code>rqname</code> 값이 <code>opt10001_req</code>인지 확인.</p>
 <h2 id="getcommrealdata"><a class="header-anchor" href="#getcommrealdata">¶</a>GetCommRealData</h2>
-
+<img src="/2017/11/21/kiwoom-method/GetCommRealData.png">
 <h2 id="getlogininfo"><a class="header-anchor" href="#getlogininfo">¶</a>GetLoginInfo</h2>
 <img src="/2017/11/21/kiwoom-method/GetLoginInfo.png">
 <p>계좌 개수, 계좌 번호, 사용자 ID, 사용자명등의 정보를 얻어올 수 있음.</p>
@@ -233,7 +233,7 @@ ga('send', 'pageview');
 <p>종목 코드로부터 한글 종목명을 얻기 위해 사용</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kospi_code_name_list = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> kospi_code_list:</span><br><span class="line">    name = self.kiwoom.dynamicCall(<span class="string">"GetMasterCodeName(QString)"</span>, [x])</span><br><span class="line">    kospi_code_name_list.append(x + <span class="string">" : "</span> + name)</span><br></pre></td></tr></table></figure>
 <h2 id="getrepeatcnt"><a class="header-anchor" href="#getrepeatcnt">¶</a>GetRepeatCnt</h2>
-
+<img src="/2017/11/21/kiwoom-method/GetRepeatCnt.png">
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_get_repeat_cnt</span><span class="params">(self, trcode, rqname)</span>:</span></span><br><span class="line">    ret = self.dynamicCall(<span class="string">"GetRepeatCnt(QString, QString)"</span>, trcode, rqname)</span><br><span class="line">    <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure>
 <h2 id="sendorder"><a class="header-anchor" href="#sendorder">¶</a>SendOrder</h2>
 <img src="/2017/11/21/kiwoom-method/SendOrder.png">
@@ -434,11 +434,11 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="../kiwoom-tr-and-fid/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="../openapi-basic-api/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            kiwoom TR and FID
+            OpenAPI+ basic API
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
@@ -467,8 +467,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></p>
-                            <p class="item-title"><a href="../openapi-basic-api/" class="title">OpenAPI+ basic API</a></p>
-                            <p class="item-date"><time datetime="2017-11-21T06:30:53.508Z" itemprop="datePublished">2017-11-21</time></p>
+                            <p class="item-title"><a href="../../25/kiwoom-tr-and-fid/" class="title">kiwoom TR and FID</a></p>
+                            <p class="item-date"><time datetime="2017-11-25T13:25:00.000Z" itemprop="datePublished">2017-11-25</time></p>
                         </div>
                     </li>
                 
@@ -476,8 +476,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></p>
-                            <p class="item-title"><a href="../kiwoom-tr-and-fid/" class="title">kiwoom TR and FID</a></p>
-                            <p class="item-date"><time datetime="2017-11-21T06:30:35.204Z" itemprop="datePublished">2017-11-21</time></p>
+                            <p class="item-title"><a href="../openapi-basic-api/" class="title">OpenAPI+ basic API</a></p>
+                            <p class="item-date"><time datetime="2017-11-21T06:30:53.508Z" itemprop="datePublished">2017-11-21</time></p>
                         </div>
                     </li>
                 
