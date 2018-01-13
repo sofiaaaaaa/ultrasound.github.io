@@ -83,7 +83,7 @@ ga('send', 'pageview');
                                     <a class="main-nav-list-link" href="../../../../index.html">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/python/">python</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/howto/">HowTo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/python/">python</a></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="../../../../about/index.html">About</a>
@@ -183,7 +183,7 @@ ga('send', 'pageview');
 <p><code>CommConnect</code> 메서드는 인자를 갖지 않으며 반환 값을 통해 로그인 성공 여부를 확인.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.kiwoom.dynamicCall(<span class="string">"CommConnect()"</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="commrqdata"><a class="header-anchor" href="#commrqdata">¶</a>CommRqData</h2>
-<img src="/2017/11/21/kiwoom-method/CommRqData.png">
+
 <p>TR을 서버로 송신</p>
 <h2 id="getconnectstate"><a class="header-anchor" href="#getconnectstate">¶</a>GetConnectState</h2>
 <img src="/2017/11/21/kiwoom-method/GetConnectState.png">
@@ -197,21 +197,21 @@ ga('send', 'pageview');
 <p><code>PyQt</code>에서 <code>OpenAPI+</code>의 이벤트를 처리하려면 이벤트 함수의 원형을 참조해서 해당 이벤트를 처리할 메서드를 구현해야 함.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">event_connect</span><span class="params">(self, err_code)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> err_code == <span class="number">0</span>:</span><br><span class="line">        self.text_edit.append(<span class="string">"로그인 성공"</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="onreceivetrdata"><a class="header-anchor" href="#onreceivetrdata">¶</a>OnReceiveTrData</h2>
-<img src="/2017/11/21/kiwoom-method/OnReceiveTrData.png">
+
 <p>서버와 통신 후 서버로 부터 데이터를 전달받은 시점에 발생.<br>
 이벤트는 총 9개의 인자가 전달됨.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">receive_trdata</span><span class="params">(self, screen_no, rqname, trcode, recordname, prev_next, data_len, err_code, msg1, msg2)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
 <h2 id="onreceiverealdata"><a class="header-anchor" href="#onreceiverealdata">¶</a>OnReceiveRealData</h2>
-<img src="/2017/11/21/kiwoom-method/OnReceiveRealData.png">
+
 <p>실시간 데이터를 받는 곳으로 주식시장이 열려있는 동안에만 발동 됨.<br>
 가격이나 거래량, 호가상태등이 변동 할 때 이벤트가 발생(setrealreg이용)</p>
 <h2 id="onreceivechejandata"><a class="header-anchor" href="#onreceivechejandata">¶</a>OnReceiveChejanData</h2>
-<img src="/2017/11/21/kiwoom-method/OnReceiveChejanData.png">
+
 <p>체결 데이터를 받은 시점을 알려준다.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.OnReceiveChejanData.connect(self._receive_chejan_data)</span><br></pre></td></tr></table></figure>
 <h2 id="commgetdata"><a class="header-anchor" href="#commgetdata">¶</a>CommGetData</h2>
 <p style="color: red;">더 이상 지원하지 않을 함수(2017년 11월 25일 현재는 지원)</p>
-<img src="/2017/11/21/kiwoom-method/CommGetData.png">
+
 <p><code>TR</code> 데이터, 실시간 데이터, 체결잔고 데이터 등을 얻어올 수 있음.<br>
 <code>CommGetData</code> 메서드는 <code>OpenAPI+</code>가 제공하는 메서드이므로 이를 파이썬에서 사용하려면 <code>dynamicCall</code> 메서드를 사용해야 함.<br>
 그리고 <code>OpenAPI+</code>에는 수많은 <code>TR</code>이 있으므로 <code>CommGetData</code>의 첫 번째 인자와 세 번째 인자에 <code>TR</code> 명과 <code>Request</code> 명을 입력하여 어떤 <code>TR</code>에 대한 데이터를 얻고자 하는지 알려줘야 함.</p>
@@ -222,9 +222,9 @@ ga('send', 'pageview');
 <h2 id="getcommdata"><a class="header-anchor" href="#getcommdata">¶</a>GetCommData</h2>
 <img src="/2017/11/21/kiwoom-method/GetCommData.png">
 <h2 id="getcommrealdata"><a class="header-anchor" href="#getcommrealdata">¶</a>GetCommRealData</h2>
-<img src="/2017/11/21/kiwoom-method/GetCommRealData.png">
+
 <h2 id="getlogininfo"><a class="header-anchor" href="#getlogininfo">¶</a>GetLoginInfo</h2>
-<img src="/2017/11/21/kiwoom-method/GetLoginInfo.png">
+
 <p>계좌 개수, 계좌 번호, 사용자 ID, 사용자명등의 정보를 얻어올 수 있음.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">account_num = self.kiwoom.dynamicCall(<span class="string">"GetLoginInfo(QString)"</span>, [<span class="string">"ACCNO"</span>])</span><br></pre></td></tr></table></figure>
 <h2 id="getcodelistbymarket"><a class="header-anchor" href="#getcodelistbymarket">¶</a>GetCodeListByMarket</h2>
@@ -237,7 +237,7 @@ ga('send', 'pageview');
 <p>종목 코드로부터 한글 종목명을 얻기 위해 사용</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kospi_code_name_list = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> kospi_code_list:</span><br><span class="line">    name = self.kiwoom.dynamicCall(<span class="string">"GetMasterCodeName(QString)"</span>, [x])</span><br><span class="line">    kospi_code_name_list.append(x + <span class="string">" : "</span> + name)</span><br></pre></td></tr></table></figure>
 <h2 id="getrepeatcnt"><a class="header-anchor" href="#getrepeatcnt">¶</a>GetRepeatCnt</h2>
-<img src="/2017/11/21/kiwoom-method/GetRepeatCnt.png">
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_get_repeat_cnt</span><span class="params">(self, trcode, rqname)</span>:</span></span><br><span class="line">    ret = self.dynamicCall(<span class="string">"GetRepeatCnt(QString, QString)"</span>, trcode, rqname)</span><br><span class="line">    <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure>
 <h2 id="sendorder"><a class="header-anchor" href="#sendorder">¶</a>SendOrder</h2>
 <img src="/2017/11/21/kiwoom-method/SendOrder.png">
@@ -317,7 +317,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="https://ultrasound.github.io2017/11/21/kiwoom-method/" data-id="cjbag8ocm001dowv3i6zrrzf9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://ultrasound.github.io2017/11/21/kiwoom-method/" data-id="cjcdgb7130014l4v39w7rjr4m" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -470,6 +470,15 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="../../../../categories/howto/">HowTo</a></p>
+                            <p class="item-title"><a href="../../../../2018/01/13/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu/" class="title">How to set up Django with Postgres, Nginx, and Gunicorn on Ubuntu</a></p>
+                            <p class="item-date"><time datetime="2018-01-13T14:30:35.217Z" itemprop="datePublished">2018-01-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="../../../../categories/python/">python</a></p>
                             <p class="item-title"><a href="../../../12/16/built-in-functions/" class="title">built-in functions</a></p>
                             <p class="item-date"><time datetime="2017-12-16T07:25:31.148Z" itemprop="datePublished">2017-12-16</time></p>
@@ -503,15 +512,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></p>
-                            <p class="item-title"><a href="../python-trading-system/" class="title">python trading system</a></p>
-                            <p class="item-date"><time datetime="2017-11-21T04:55:01.953Z" itemprop="datePublished">2017-11-21</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -521,7 +521,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/python/">python</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/howto/">HowTo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/python/">python</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -531,7 +531,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/11/">November 2017</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/11/">November 2017</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
@@ -541,7 +541,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/api/">API</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/fid/">FID</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tdd/">TDD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tr/">TR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/built-in-functions/">built-in functions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/kiwoom/">kiwoom</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/trading/">trading</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/api/">API</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/fid/">FID</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/howto/">HowTo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/postgres/">Postgres</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tdd/">TDD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tr/">TR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/built-in-functions/">built-in functions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/django/">django</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/gunicorn/">gunicorn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/howto/">howto</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/kiwoom/">kiwoom</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/trading/">trading</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -551,7 +551,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="../../../../tags/api/" style="font-size: 10px;">API</a> <a href="../../../../tags/fid/" style="font-size: 10px;">FID</a> <a href="../../../../tags/tdd/" style="font-size: 10px;">TDD</a> <a href="../../../../tags/tr/" style="font-size: 10px;">TR</a> <a href="../../../../tags/built-in-functions/" style="font-size: 10px;">built-in functions</a> <a href="../../../../tags/kiwoom/" style="font-size: 20px;">kiwoom</a> <a href="../../../../tags/python/" style="font-size: 20px;">python</a> <a href="../../../../tags/trading/" style="font-size: 15px;">trading</a>
+            <a href="../../../../tags/api/" style="font-size: 10px;">API</a> <a href="../../../../tags/fid/" style="font-size: 10px;">FID</a> <a href="../../../../tags/howto/" style="font-size: 10px;">HowTo</a> <a href="../../../../tags/postgres/" style="font-size: 10px;">Postgres</a> <a href="../../../../tags/tdd/" style="font-size: 10px;">TDD</a> <a href="../../../../tags/tr/" style="font-size: 10px;">TR</a> <a href="../../../../tags/built-in-functions/" style="font-size: 10px;">built-in functions</a> <a href="../../../../tags/django/" style="font-size: 10px;">django</a> <a href="../../../../tags/gunicorn/" style="font-size: 10px;">gunicorn</a> <a href="../../../../tags/howto/" style="font-size: 10px;">howto</a> <a href="../../../../tags/kiwoom/" style="font-size: 20px;">kiwoom</a> <a href="../../../../tags/nginx/" style="font-size: 10px;">nginx</a> <a href="../../../../tags/python/" style="font-size: 20px;">python</a> <a href="../../../../tags/trading/" style="font-size: 15px;">trading</a> <a href="../../../../tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
         </div>
     </div>
 
@@ -591,7 +591,7 @@ ga('send', 'pageview');
                 <h1 class="logo-wrap">
                     <a href="../../../../index.html" class="logo"></a>
                 </h1>
-                <p>&copy; 2017 Hyogeun Kim</p>
+                <p>&copy; 2018 Hyogeun Kim</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>

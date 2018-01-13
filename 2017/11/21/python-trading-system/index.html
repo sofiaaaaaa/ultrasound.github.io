@@ -83,7 +83,7 @@ ga('send', 'pageview');
                                     <a class="main-nav-list-link" href="../../../../index.html">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/python/">python</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/howto/">HowTo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/python/">python</a></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="../../../../about/index.html">About</a>
@@ -198,7 +198,7 @@ ga('send', 'pageview');
 <li><code>키움 Open API+</code> 설치.</li>
 </ol>
 <h2 id="개발-1일차"><a class="header-anchor" href="#개발-1일차">¶</a>개발 1일차</h2>
-<h3 id="1-자동-버전처리-스크립트"><a class="header-anchor" href="#1-자동-버전처리-스크립트">¶</a>1) 자동 버전처리 스크립트</h3>
+<h3 id="자동-버전처리-스크립트"><a class="header-anchor" href="#자동-버전처리-스크립트">¶</a>자동 버전처리 스크립트</h3>
 <p>OpenAPI+를 이용해 개발한 프로그램에서 로그인을 시도할 때 버전 처리가 필요하면 버전 처리 메시지 창이 아래와 같이 나타남.</p>
 <p><img src="https://wikidocs.net/images/page/5856/r18.02.png" alt="버전 처리 메시지 창"></p>
 <p>버전 처리를 가장 쉽게 할 수 있는 방법은 번개 HTS를 사용하는 것.<br>
@@ -224,7 +224,7 @@ ga('send', 'pageview');
 <p><img src="https://wikidocs.net/images/page/5856/r18.06.png" alt="관리자 권한으로 실행하지 않은 경우 발생하는 에러"></p>
 <p>윈도우 대화상자의 이름과 각 컨트롤의 이름을 알아내가 위해 <a href="https://github.com/pywinauto/SWAPY" target="_blank" rel="noopener">SWAPY</a> 라는 실행 프로그램을 사용.</p>
 <p><img src="https://wikidocs.net/images/page/5856/r18.07.png" alt="SWAPY 프로그램"></p>
-<h3 id="2-윈도우-작업-스케쥴러"><a class="header-anchor" href="#2-윈도우-작업-스케쥴러">¶</a>2) 윈도우 작업 스케쥴러</h3>
+<h3 id="윈도우-작업-스케쥴러"><a class="header-anchor" href="#윈도우-작업-스케쥴러">¶</a>윈도우 작업 스케쥴러</h3>
 <p>윈도우의 작업 스케쥴러를 이용해 정해진 시간에 파이썬 스크립트 자동 실행.</p>
 <p><img src="https://wikidocs.net/images/page/5857/r18.08.png" alt="작업 스케쥴러 실행"></p>
 <p><img src="https://wikidocs.net/images/page/5857/r18.09.png" alt="새 작업 만들기"></p>
@@ -234,7 +234,7 @@ ga('send', 'pageview');
 <p><img src="https://wikidocs.net/images/page/5857/r18.13.png" alt="새 동작 만들기"></p>
 <p><code>python.exe</code> 대신 <code>pythonw.exe</code>를 선택한 것은 스크립트 실행 시 콘솔</p>
 <p><img src="https://wikidocs.net/images/page/5857/r18.14.png" alt="조건 항목 설정"></p>
-<h3 id="3-pytrader-구현"><a class="header-anchor" href="#3-pytrader-구현">¶</a>3) PyTrader 구현</h3>
+<h3 id="pytrader-구현"><a class="header-anchor" href="#pytrader-구현">¶</a>PyTrader 구현</h3>
 <p><code>Qt Designer</code>를 이용해 메인 윈도우를 만듬.</p>
 <p><a href="https://wikidocs.net/5218" target="_blank" rel="noopener">PyQt를 이용한 GUI 프로그래밍</a> 참조.</p>
 <p>프로그램에 사용할 무료 아이콘 <a href="http://www.myiconfinder.com/" target="_blank" rel="noopener">MyIconFinder</a> 나 <a href="http://www.flaticon.com/" target="_blank" rel="noopener">Flaticon</a></p>
@@ -256,7 +256,7 @@ ga('send', 'pageview');
 따라서 <code>timeout</code> 시그널이 발생할 때 이를 처리할 슬롯으로 <code>self.timeout</code>을 설정하면 됨.</p>
 <figure class="highlight python"><figcaption><span>timout class pytrader.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">timeout</span><span class="params">(self)</span>:</span></span><br><span class="line">    current_time = QTime.currentTime()</span><br><span class="line">    text_time = current_time.toString(<span class="string">"hh:mm:ss"</span>)</span><br><span class="line">    time_msg = <span class="string">"현재시간: "</span> + text_time</span><br><span class="line"></span><br><span class="line">    state = self.kiwoom.GetConnectState()</span><br><span class="line">    <span class="keyword">if</span> state == <span class="number">1</span>:</span><br><span class="line">        state_msg = <span class="string">"서버 연결 중"</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        state_msg = <span class="string">"서버 미 연결 중"</span></span><br><span class="line"></span><br><span class="line">    self.statusbar.showMessage(state_msg + <span class="string">" | "</span> + time_msg)</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><figcaption><span>전체 pytrader.py 코드</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> uic</span><br><span class="line"><span class="keyword">from</span> Kiwoom <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">form_class = uic.loadUiType(<span class="string">"pytrader.ui"</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWindow</span><span class="params">(QMainWindow, form_class)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        self.setupUi(self)</span><br><span class="line"></span><br><span class="line">        self.kiwoom = Kiwoom()</span><br><span class="line">        self.kiwoom.comm_connect()</span><br><span class="line"></span><br><span class="line">        self.timer = QTimer(self)</span><br><span class="line">        self.timer.start(<span class="number">1000</span>)</span><br><span class="line">        self.timer.timeout.connect(self.timeout)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">timeout</span><span class="params">(self)</span>:</span></span><br><span class="line">        current_time = QTime.currentTime()</span><br><span class="line">        text_time = current_time.toString(<span class="string">"hh:mm:ss"</span>)</span><br><span class="line">        time_msg = <span class="string">"현재시간: "</span> + text_time</span><br><span class="line"></span><br><span class="line">        state = self.kiwoom.get_connect_state()</span><br><span class="line">        <span class="keyword">if</span> state == <span class="number">1</span>:</span><br><span class="line">            state_msg = <span class="string">"서버 연결 중"</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            state_msg = <span class="string">"서버 미 연결 중"</span></span><br><span class="line"></span><br><span class="line">        self.statusbar.showMessage(state_msg + <span class="string">" | "</span> + time_msg)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    myWindow = MyWindow()</span><br><span class="line">    myWindow.show()</span><br><span class="line">    app.exec_()</span><br></pre></td></tr></table></figure>
-<h3 id="4-키움-openapi-자동-로그인"><a class="header-anchor" href="#4-키움-openapi-자동-로그인">¶</a>4) 키움 OpenAPI+ 자동 로그인</h3>
+<h3 id="키움-openapi-자동-로그인"><a class="header-anchor" href="#키움-openapi-자동-로그인">¶</a>키움 OpenAPI+ 자동 로그인</h3>
 <p>자동화를 위해 사용자 계정 컨트롤 기능 비활성화</p>
 <p><img src="https://wikidocs.net/images/page/5859/r18.20.png" alt="사용자 계정 컨트롤 설정"></p>
 <p>키움 증권 로그인 과정 자동화.<br>
@@ -447,7 +447,7 @@ Kiwoom 클래스의 <code>get_login_info</code> 메서드를 사용하여 다음
 <p><img src="https://wikidocs.net/images/page/6235/r18.57.png" alt="opw00018 TR 사용"></p>
 <p>예수금 정보는 <code>opw00001 TR</code>을 사용.</p>
 <p><img src="https://wikidocs.net/images/page/6235/r18.58.png" alt="opw00001 TR 사용"></p>
-<img src="/2017/11/21/python-trading-system/tr_request_workflow.png">
+
 <p>먼저 <a href="../kiwoom-md/#OnReceiveTrData">OnReceiveTrData</a> 이벤트가 발생할 때 수신 데이터를 가져오는 함수인 <code>_opw0001</code>를 Kiwoom 클래스에 추가.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_opw00001</span><span class="params">(self, rqname, trcode)</span>:</span></span><br><span class="line">    self.d2_deposit = self._comm_get_data(trcode, <span class="string">""</span>, rqname, <span class="number">0</span>, <span class="string">"d+2추정예수금"</span>)</span><br></pre></td></tr></table></figure>
 <blockquote><p><code>_receive_tr_data</code> 메서드를 구현할 때 다음 세가지 고려 사항</p>
@@ -577,7 +577,7 @@ Kiwoom 클래스에 다음 메서드를 추가</p>
 
 
 
-    <a data-url="https://ultrasound.github.io2017/11/21/python-trading-system/" data-id="cjbag8ocx001nowv3hnzboxnc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://ultrasound.github.io2017/11/21/python-trading-system/" data-id="cjcdgb73m003xl4v3kost54pr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -730,6 +730,15 @@ Kiwoom 클래스에 다음 메서드를 추가</p>
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="../../../../categories/howto/">HowTo</a></p>
+                            <p class="item-title"><a href="../../../../2018/01/13/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu/" class="title">How to set up Django with Postgres, Nginx, and Gunicorn on Ubuntu</a></p>
+                            <p class="item-date"><time datetime="2018-01-13T14:30:35.217Z" itemprop="datePublished">2018-01-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="../../../../categories/python/">python</a></p>
                             <p class="item-title"><a href="../../../12/16/built-in-functions/" class="title">built-in functions</a></p>
                             <p class="item-date"><time datetime="2017-12-16T07:25:31.148Z" itemprop="datePublished">2017-12-16</time></p>
@@ -763,15 +772,6 @@ Kiwoom 클래스에 다음 메서드를 추가</p>
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></p>
-                            <p class="item-title"><a href="" class="title">python trading system</a></p>
-                            <p class="item-date"><time datetime="2017-11-21T04:55:01.953Z" itemprop="datePublished">2017-11-21</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -781,7 +781,7 @@ Kiwoom 클래스에 다음 메서드를 추가</p>
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/python/">python</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/howto/">HowTo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/python/">python</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -791,7 +791,7 @@ Kiwoom 클래스에 다음 메서드를 추가</p>
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/11/">November 2017</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/11/">November 2017</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
@@ -801,7 +801,7 @@ Kiwoom 클래스에 다음 메서드를 추가</p>
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/api/">API</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/fid/">FID</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tdd/">TDD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tr/">TR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/built-in-functions/">built-in functions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/kiwoom/">kiwoom</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/trading/">trading</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/api/">API</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/fid/">FID</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/howto/">HowTo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/postgres/">Postgres</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tdd/">TDD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tr/">TR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/built-in-functions/">built-in functions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/django/">django</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/gunicorn/">gunicorn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/howto/">howto</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/kiwoom/">kiwoom</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/trading/">trading</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -811,7 +811,7 @@ Kiwoom 클래스에 다음 메서드를 추가</p>
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="../../../../tags/api/" style="font-size: 10px;">API</a> <a href="../../../../tags/fid/" style="font-size: 10px;">FID</a> <a href="../../../../tags/tdd/" style="font-size: 10px;">TDD</a> <a href="../../../../tags/tr/" style="font-size: 10px;">TR</a> <a href="../../../../tags/built-in-functions/" style="font-size: 10px;">built-in functions</a> <a href="../../../../tags/kiwoom/" style="font-size: 20px;">kiwoom</a> <a href="../../../../tags/python/" style="font-size: 20px;">python</a> <a href="../../../../tags/trading/" style="font-size: 15px;">trading</a>
+            <a href="../../../../tags/api/" style="font-size: 10px;">API</a> <a href="../../../../tags/fid/" style="font-size: 10px;">FID</a> <a href="../../../../tags/howto/" style="font-size: 10px;">HowTo</a> <a href="../../../../tags/postgres/" style="font-size: 10px;">Postgres</a> <a href="../../../../tags/tdd/" style="font-size: 10px;">TDD</a> <a href="../../../../tags/tr/" style="font-size: 10px;">TR</a> <a href="../../../../tags/built-in-functions/" style="font-size: 10px;">built-in functions</a> <a href="../../../../tags/django/" style="font-size: 10px;">django</a> <a href="../../../../tags/gunicorn/" style="font-size: 10px;">gunicorn</a> <a href="../../../../tags/howto/" style="font-size: 10px;">howto</a> <a href="../../../../tags/kiwoom/" style="font-size: 20px;">kiwoom</a> <a href="../../../../tags/nginx/" style="font-size: 10px;">nginx</a> <a href="../../../../tags/python/" style="font-size: 20px;">python</a> <a href="../../../../tags/trading/" style="font-size: 15px;">trading</a> <a href="../../../../tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
         </div>
     </div>
 
@@ -851,7 +851,7 @@ Kiwoom 클래스에 다음 메서드를 추가</p>
                 <h1 class="logo-wrap">
                     <a href="../../../../index.html" class="logo"></a>
                 </h1>
-                <p>&copy; 2017 Hyogeun Kim</p>
+                <p>&copy; 2018 Hyogeun Kim</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>

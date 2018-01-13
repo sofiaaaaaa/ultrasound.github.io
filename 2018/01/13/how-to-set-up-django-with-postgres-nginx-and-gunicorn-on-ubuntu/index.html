@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>How to set up Django with Postgres, Nginx, and Gunicorn on Ubuntu | Just Fucking Do It!!!</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="django,howto,Postgres,nginx,ubuntu,gunicorn,HowTo" />
+    
+    <meta name="description" content="¶Install the packages from the Ubuntu repositories Python212$ sudo apt-get update$ sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-co">
+<meta name="keywords" content="django,howto,Postgres,nginx,ubuntu,gunicorn,HowTo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to set up Django with Postgres, Nginx, and Gunicorn on Ubuntu">
+<meta property="og:url" content="https://ultrasound.github.io/2018/01/13/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu/index.html">
+<meta property="og:site_name" content="Just Fucking Do It!!!">
+<meta property="og:description" content="¶Install the packages from the Ubuntu repositories Python212$ sudo apt-get update$ sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib nginx Python312$ sudo apt-get upda">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-01-09T07:40:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to set up Django with Postgres, Nginx, and Gunicorn on Ubuntu">
+<meta name="twitter:description" content="¶Install the packages from the Ubuntu repositories Python212$ sudo apt-get update$ sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib nginx Python312$ sudo apt-get upda">
+    
+
+    
+        <link rel="alternate" href="/" title="Just Fucking Do It!!!" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="../../../../libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="../../../../libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="../../../../css/style.css">
+
+    <script src="../../../../libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="../../../../libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="../../../../libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', '88646082', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="../../../../index.html" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="../../../../index.html">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/howto/">HowTo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="../../../../categories/python/">python</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="../../../../about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '../../../../content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="../../../../js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="../../../../categories/howto/">HowTo</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        How to set up Django with Postgres, Nginx, and Gunicorn on Ubuntu
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="" class="article-date">
+            <time datetime="2018-01-13T14:30:35.217Z" itemprop="datePublished">2018-01-13</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="../../../../tags/howto/">HowTo</a>, <a class="tag-link" href="../../../../tags/postgres/">Postgres</a>, <a class="tag-link" href="../../../../tags/django/">django</a>, <a class="tag-link" href="../../../../tags/gunicorn/">gunicorn</a>, <a class="tag-link" href="../../../../tags/howto/">howto</a>, <a class="tag-link" href="../../../../tags/nginx/">nginx</a>, <a class="tag-link" href="../../../../tags/ubuntu/">ubuntu</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h3 id="install-the-packages-from-the-ubuntu-repositories"><a class="header-anchor" href="#install-the-packages-from-the-ubuntu-repositories">¶</a>Install the packages from the Ubuntu repositories</h3>
+<figure class="highlight bash"><figcaption><span>Python2</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib nginx</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>Python3</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx</span><br></pre></td></tr></table></figure>
+<p>the Python development files needed to build Gunicorn later, the Postgres database system and the libraries needed to interact with it</p>
+<h3 id="create-the-postgresql-database-and-user"><a class="header-anchor" href="#create-the-postgresql-database-and-user">¶</a>Create the PostgreSQL database and user</h3>
+<p>By default, Postgres uses an authentication scheme called <code>peer authentication</code> for local connections.<br>
+Basically, this means that if the user’s operating system username matches a valid Postgres username, that user can login with no further authentication.</p>
+<p>During the Postgres install, an operating system user named <code>postgres</code> was created to correspond to the <code>postgres</code> PostgreSQL administrative user.<br>
+We need to user this user to perform administrative tasks. We can use sudo and pass in the username with the <code>-u</code> option.</p>
+<p>Log into an interactive Postgres session by typing:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo -u postgres psql</span><br></pre></td></tr></table></figure>
+<p>First, create a database for your projct:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">postgres=<span class="comment"># CREATE DATABASE myproject;</span></span><br></pre></td></tr></table></figure>
+<p>Next, create a databse user for our project. Make sure to select a secure password:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">postgres=<span class="comment"># CREATE USER myprojectuser WITH PASSWORD 'password';</span></span><br></pre></td></tr></table></figure>
+<p>We are setting the default encoding to <code>UTF-8</code>, which Django expects.<br>
+We are also setting the default transaction isolation scheme to <code>read committed</code>, which blocks reads from uncommitted transactions.<br>
+Lastly, we are setting the timezone. By default, our Django projects will be set tu use <code>UTC</code>.<br>
+These are all recommendations from the <a href="https://docs.djangoproject.com/en/1.9/ref/databases/#optimizing-postgresql-s-configuration" target="_blank" rel="noopener">Django project itself</a>.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">postgres=<span class="comment"># ALTER ROLE myprojectuser SET client_encoding TO 'utf8';</span></span><br><span class="line">postgres=<span class="comment"># ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';</span></span><br><span class="line">postgres=<span class="comment"># ALTER ROLE myprojectuser SET timezone TO 'UTC';</span></span><br></pre></td></tr></table></figure>
+<p>Now, we can give our new user access to administer our new database:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">postgres=<span class="comment"># GRANT ALL PRIVILEGES ON DATABASE  myproject TO myprojectuser;</span></span><br></pre></td></tr></table></figure>
+<p>To exit out the PostgreSQL prompt:</p>
+<p><code>postgres=# \q</code></p>
+<h3 id="create-a-python-virtual-environment-for-your-project"><a class="header-anchor" href="#create-a-python-virtual-environment-for-your-project">¶</a>Create a Python Virtual Environment for your project</h3>
+<figure class="highlight bash"><figcaption><span>python2</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo -H pip install --upgrade pip</span><br><span class="line"><span class="comment"># sudo -H pip install virtualenv</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>python3</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo -H pip3 install --upgrade pip</span><br><span class="line"><span class="comment"># sudo -H pip3 install virtualenv</span></span><br></pre></td></tr></table></figure>
+<p>With <code>virtualenv</code> installed, we can start forming our project.<br>
+Create and move into a directory where we can keep our project files:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/myproject</span><br><span class="line">$ <span class="built_in">cd</span> ~/myproject</span><br></pre></td></tr></table></figure>
+<p>Create a Python virtual environment:</p>
+<p><code>$ virtualenv myprojectenv</code></p>
+<p>This will create a directory called <code>myprojectenv</code> within your <code>myproject</code> directory.<br>
+Inside, it will install a local version of Python and a local version of <code>pip</code>.</p>
+<p>Activate the virtual environment:</p>
+<p><code>$ source myprojectenv/bin/acivate</code></p>
+<p>With your virtual environment active, install Django, Gunicorn, and the <code>psycopg2</code> PostgreSQL adaptor with the local instance of <code>pip</code>:</p>
+<p><code>$ pip install django gunicorn psycopg2</code></p>
+<p>You should now have all of the software needed to start a Django project.</p>
+<h3 id="create-and-configure-a-new-django-project"><a class="header-anchor" href="#create-and-configure-a-new-django-project">¶</a>Create and Configure a New Django Project</h3>
+<h4 id="create-the-django-project"><a class="header-anchor" href="#create-the-django-project">¶</a>Create the Django Project</h4>
+<p>It will create a second level directory with the actual code, which is normal, and place a management script in this directory.<br>
+The key to this is that we are defining the directory explicitly instead of allowing Django to make decisions relative to our current directory:</p>
+<p><code>$ django-admin.py startproject myporject ~/myproject</code></p>
+<p>At this point, your project directory(<code>~/myproject</code> in our case) should have the following content:</p>
+<ul>
+<li><code>~/myproject/manage.py</code>: A Django project management script.</li>
+<li><code>~/myproject/myproject/</code>: The Django project package. This should contain the <code>__init__.py</code>, <code>settings.py</code>, <code>urls.py</code>, and <code>wsgi.py</code> files.</li>
+<li><code>~/myproject/myprojectenv/</code>: The virtual environment directory we created earlier.</li>
+</ul>
+<h4 id="adjust-the-project-settings"><a class="header-anchor" href="#adjust-the-project-settings">¶</a>Adjust the Project Settings</h4>
+<p>The first thing we should do with our newly created project files is adjust the settings.<br>
+Open the settings file in your text editor:<br>
+<code>(myenv) $ nano ~/myproject/myproject/settings.py</code></p>
+<p>Start by locating the <code>ALLOWED_HOSTS</code> directive. This defines a list of the server’s addresses or domain names may be used to connect to the Django instance.<br>
+Any incoming requests with a <code>Host</code> header that is not in this list will raise an exception.<br>
+Django requires that you set this to prevent a certain class of security vulnerability.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># the simplest case: just the domain name(s) and IP addresses of your Djanog server</span></span><br><span class="line"><span class="comment"># ALLOWED_HOSTS = ['example.com', '203.0.113.5']</span></span><br><span class="line"><span class="comment"># To responde to 'example.com' and any subdomains, start the domain with a dot</span></span><br><span class="line"><span class="comment"># ALLOWED_HOSTS = ['.example.com', '203.0.113.5']</span></span><br><span class="line">ALLOWED_HOSTS = [<span class="string">'your_server_domain_or_IP'</span>, <span class="string">'second_domain_or_IP'</span>,...]</span><br></pre></td></tr></table></figure>
+<p>Next, find the section that configures database access. It will start with <code>DATABASE</code>.<br>
+The configuration in the file is for a SQLite database.<br>
+Change the setting with your PostgreSQL database information.<br>
+We tell Django to use the <code>psycopg2</code> adaptor we installed with <code>pip</code>.</p>
+<figure class="highlight python"><figcaption><span>~/myproject/myproject/settings.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DATABASE = &#123;</span><br><span class="line">    <span class="string">'default'</span>: &#123;</span><br><span class="line">        <span class="string">'ENGINE'</span>: <span class="string">'django.db.backends.postrgreql_psycopg2'</span>,</span><br><span class="line">        <span class="string">'NAME'</span>: <span class="string">'myproject'</span>,</span><br><span class="line">        <span class="string">'USER'</span>: <span class="string">'myprojectuser'</span>,</span><br><span class="line">        <span class="string">'PASSWORD'</span>: <span class="string">'password'</span>,</span><br><span class="line">        <span class="string">'HOST'</span>: <span class="string">'localhosts'</span>,</span><br><span class="line">        <span class="string">'PORT'</span>: <span class="string">''</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>static files is necessary so that Nginx can handle requests for these items.<br>
+The following line tells Django to place them in a directory called <code>static</code> in the base project directory:</p>
+<figure class="highlight python"><figcaption><span>~/myproject/myproject/settings.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">STATIC_URL = <span class="string">'/static/'</span></span><br><span class="line">STATIC_ROOT = os.path.join(BASE_DIR, <span class="string">'static/'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="complete-initial-pfoject-setup"><a class="header-anchor" href="#complete-initial-pfoject-setup">¶</a>Complete Initial Pfoject Setup</h4>
+<p>Now, we can migrate the initial databse schema to our PostgreSQL database using the management script:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(myenv) $ ~/myproject/manage.py makemigrations</span><br><span class="line">(myenv) $ ~/myproject/manage.py migrate</span><br></pre></td></tr></table></figure>
+<p>Create an administrative user for project by typing:<br>
+<code>(myenv) $ ~/myproject/manage.py createsuperuser</code></p>
+<p>We can collect all of the static content into the directory location we configured<br>
+<code>(myenv) $ ~/myproject/manage.py collectstatic</code></p>
+<p>You should have a UFW firewall protecting your server. In order to test the development server, we’ll have to allow access to the port we’ll be using.<br>
+<code>(myenv) $ sudo ufw allow 8000</code></p>
+<p>Finally, you can test our your project by starting up the Django development server with this command:<br>
+<code>(myprojectenv) $ ~/myproject/manage.py runserver 0.0.0.0:8000</code></p>
+<h4 id="testing-gunicorn-s-ability-to-serve-the-project"><a class="header-anchor" href="#testing-gunicorn-s-ability-to-serve-the-project">¶</a>Testing Gunicorn’s Ability to Serve the Project</h4>
+<p>Ths last thing we want to do before leaving our virtual environment is test Gunicorn to make sure that it can serve the application.<br>
+We can do this by entering our project directory and using <code>gunicorn</code> to load the project’s <code>WSGI</code> module.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(myenv) $ <span class="built_in">cd</span> ~/myproject</span><br><span class="line">(myenv) $ gunicorn --<span class="built_in">bind</span> 0.0.0.0:8000 myproject.wsgi</span><br></pre></td></tr></table></figure>
+<p>We passed Gunicorn a module by specifying the relative directory path to Django’s <code>wsgi.py</code> file, which is the entry point point to our application, uing Python’s module syntax.<br>
+Inside of this file, a function called <code>application</code> is defined, which is used to communicate with the application.<br>
+To learn more about the <code>WSGI</code> specification, click <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-uwsgi-and-nginx-to-serve-python-apps-on-ubuntu-14-04#definitions-and-concepts" target="_blank" rel="noopener">here</a></p>
+<h3 id="create-a-gunicorn-systemd-service-file"><a class="header-anchor" href="#create-a-gunicorn-systemd-service-file">¶</a>Create a Gunicorn systemd Service File</h3>
+<p>Create and open a systemd service file for Gunicorn with <code>sudo</code> privileges in your text editor:</p>
+<p><code>$ sudo nano /etc/systemd/system/gunicorn.service</code></p>
+<p>Start with the <code>[Unit]</code> section, which is used to specify metadata and dependencies.<br>
+We’ll put a description of our service here and tell the init system to only start this after the networking target has been reached:</p>
+<figure class="highlight plain"><figcaption><span>/etc/systemd/system/guicorn.service lang: bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=gunicorn daemon</span><br><span class="line">After=network.target</span><br></pre></td></tr></table></figure>
+<p>Next, we’ll open up the <code>[Service]</code> section. We’ll specify the user and group that we want to process to run under.<br>
+We will give our regular user account ownership of the process since it owns all of the relevant files.<br>
+We’ll give group ownership to the <code>www-data</code> group so that Nginx can communicate easily with Gunicorn.</p>
+<p>We’ll then map out the working directory and specify the command to use to start the service.<br>
+In this case, we’ll have to specify the full path to the Gunicorn executable, which is installed within our virtual environment.<br>
+We will bing it to a Unix socket within the project directory since Nginx is installed on the same computer.<br>
+This is safer and faster than using a network port.<br>
+We can also specify any optional Gunicorn tweaks here.<br>
+For exmapl, we specified 3 worker processes in this case:</p>
+<figure class="highlight bash"><figcaption><span>/etc/systemd/system/gunicorn.service</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=gunicorn daemon</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">User=sammy</span><br><span class="line">Group=www-data</span><br><span class="line">WorkingDirectory=/home/sammy/myproject</span><br><span class="line">ExecStart=/home/sammy/myproject/myprojectenv/bin/gunicorn - access-logfile --workers 3 --<span class="built_in">bind</span> unix:/home/sammy/myproject/myproject.sock myproject.wsgi:application</span><br></pre></td></tr></table></figure>
+<p>Finally, we’ll add an <code>[install]</code> section.<br>
+This will tell systemd what to link this service to if we enable it to start at boot.<br>
+We want this service to start when the regular multi-user system is up and running:</p>
+<figure class="highlight bash"><figcaption><span>/etc/systemd/system/gunicorn.service</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=gunicorn daemon</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">User=sammy</span><br><span class="line">Group=www-data</span><br><span class="line">WorkingDirectory=/home/sammy/myproject</span><br><span class="line">ExecStart=/home/sammy/myproject/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --<span class="built_in">bind</span> unix:/home/sammy/myproject/myproject.sock myproject.wsgi:application</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<p>We can now start the Gunicorn service we created and enable it so that it starts at boot:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl start gunicorn</span><br><span class="line">$ sudo systemctl <span class="built_in">enable</span> gunicorn</span><br></pre></td></tr></table></figure>
+<h3 id="check-for-the-gunicorn-socket-file"><a class="header-anchor" href="#check-for-the-gunicorn-socket-file">¶</a>Check for the Gunicorn Socket File</h3>
+<p>Check the status of the process to find out whether it was able to start:</p>
+<p><code>$ sudo systemctl status gunicorn</code></p>
+<p>Next, check for the existenct of the <code>myproject.sock</code> file within your project directory:</p>
+<p><code>$ ls /home/sammy/myproject</code></p>
+<p>If you have a problem with an error or do not find the <code>myproject.sock</code> just check out with this command:</p>
+<p><code>$ sudo journalctl -u gunicorn</code></p>
+<p>If Gunicorn was unable to create the socket file, it is for one of these reasons:</p>
+<ul>
+<li>The project files are owned by the <code>root</code> user instead of a <code>sudo</code> user</li>
+<li>The <code>WorkingDirectory</code> path within the <code>/etc/systemd/system/gunicorn.service</code> file does not point to the project directory</li>
+<li>The configuration options given to the <code>gunicorn</code> process in the E<code>xecStart</code> directive are not correct.
+<ul>
+<li>The path to the <code>gunicorn</code> binary points to the actual location of the binary within the virtual environment</li>
+<li>The <code>--bind</code> directive defines a file to create within a directory that Gunicorn can access</li>
+<li>The <code>myproject.wsgi:application</code> is an accurate path to the WSGI callable. This means that when you’re in the <code>WorkingDirectory</code>, you should be able to reach the callable named <code>application</code> by looking in the <code>myproject.wsgi</code> module (which translates to a file called <code>./myproject/wsgi.py</code>)</li>
+</ul>
+</li>
+</ul>
+<h3 id="configure-nginx-to-proxy-pass-to-gunicorn"><a class="header-anchor" href="#configure-nginx-to-proxy-pass-to-gunicorn">¶</a>Configure Nginx to Proxy Pass to Gunicorn</h3>
+<p>Now we need to configure Nginx to pass traffic to the process.</p>
+<p>Start by creating and opening a new server block in Nginx’s <code>sites-available</code> directory:</p>
+<p><code>$ sudo vi /etc/nginx/sites-available/myproject</code></p>
+<p>Inside, open up a new server block.<br>
+We will start by specifying that this block should listen on the normal <code>port 80</code> and that it should respond to our server’s <code>domain name</code> or <code>IP</code> address:</p>
+<figure class="highlight bash"><figcaption><span>/etc/nginx/sites-available/myproject</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name server_domain_or_IP;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Next, we will tell Nginx to ignore any problems with finding a favicon.<br>
+We will also tell it where to find the static assets that we collected in our <code>~/myproject/static</code> directory.<br>
+All of these files have a standard <code>URI</code> prefix of <code>/static</code>, so we can create a location block to match those requests:</p>
+<figure class="highlight bash"><figcaption><span>/etc/nginx/sites-available/myproject</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name server_domain_or_IP</span><br><span class="line"></span><br><span class="line">    location = /favicon.ico &#123; access_log off; log_not_found off; &#125;</span><br><span class="line">    location /static/ &#123;</span><br><span class="line">        root /home/sammy/myproject;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Finally, we’ll create a <code>location / {}</code> block to match all other requests.<br>
+Inside of this location, we’ll include the standard <code>proxy_params</code> file included with the Nginx installation and then we will pass the traffic to the socket that our Gunicorn process created:</p>
+<figure class="highlight bash"><figcaption><span>/etc/nginx/sites-available/myproject</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name server_domain_or_IP;</span><br><span class="line"></span><br><span class="line">    location = /favicon.ico &#123; access_log off; log_not_found off; &#125;</span><br><span class="line">    location /static/ &#123;</span><br><span class="line">        root /home/sammy/myproject;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        include proxy_params;</span><br><span class="line">        proxy_pass http://unix:/home/sammy/myproject/myproject.sock;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Now, we can enable the file by linking it to the <code>sites-enabled</code> directory:</p>
+<p><code>$ sudo ln -s /etc/nginx/sites-available/myproject /etc/nginx/sites-enabled</code></p>
+<p>Test your Nginx configuration for syntax errors:</p>
+<p><code>$ sudo nginx -t</code></p>
+<p>If no errors are reported, go ahead and restart Nginx:</p>
+<p><code>$ sudo systemctl restart nginx</code></p>
+<p>Finally, we need to open up our filrewall to normal traffic on port 80.<br>
+since we no longer need access to the development server, we can remove the rule to open port 8000 as well:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo ufw delete allow 8000</span><br><span class="line">$ sudo ufw allow <span class="string">'Nginx Full'</span></span><br></pre></td></tr></table></figure>
+<p>You should now be able to go to your server’s domain or IP address to view your application.</p>
+<blockquote><p>After configuring Nginx, the next step should be securing traffic to the server using SSL/TLS.<br>
+This is important because without it, all information, including passwords are sent over the network in plain text.</p>
+<p>If you have a domain name, the easiest way get an SSL certificate to secure your traffic is using Let’s Encrypt.<br>
+Follow <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04" target="_blank" rel="noopener">this guide</a> to set up Let’s Encrypt with Nginx on Ubuntu 16.04.</p>
+<p>If you do not have a domain name, you can still secure your site for testing and learning with a <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-16-04" target="_blank" rel="noopener">self-signed SSL certificate</a>.</p>
+<footer><strong>Note</strong></footer></blockquote>
+<h2 id="link"><a class="header-anchor" href="#link">¶</a>Link</h2>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04" target="_blank" rel="noopener">https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04</a></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://ultrasound.github.io2018/01/13/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu/" data-id="cjcdgb7100011l4v3f2lpud3f" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ultrasound" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://www.instagram.com/ultrasound2k/" target="_blank">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://www.linkedin.com/in/ultrasound2k" target="_blank">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="../../../../index.html" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="../../../../2017/12/16/built-in-functions/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">built-in functions</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="../../../../categories/howto/">HowTo</a></p>
+                            <p class="item-title"><a href="" class="title">How to set up Django with Postgres, Nginx, and Gunicorn on Ubuntu</a></p>
+                            <p class="item-date"><time datetime="2018-01-13T14:30:35.217Z" itemprop="datePublished">2018-01-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="../../../../categories/python/">python</a></p>
+                            <p class="item-title"><a href="../../../../2017/12/16/built-in-functions/" class="title">built-in functions</a></p>
+                            <p class="item-date"><time datetime="2017-12-16T07:25:31.148Z" itemprop="datePublished">2017-12-16</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></p>
+                            <p class="item-title"><a href="../../../../2017/11/25/kiwoom-tr-and-fid/" class="title">kiwoom TR and FID</a></p>
+                            <p class="item-date"><time datetime="2017-11-25T13:25:00.000Z" itemprop="datePublished">2017-11-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></p>
+                            <p class="item-title"><a href="../../../../2017/11/21/openapi-basic-api/" class="title">OpenAPI+ basic API</a></p>
+                            <p class="item-date"><time datetime="2017-11-21T06:30:53.508Z" itemprop="datePublished">2017-11-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a></p>
+                            <p class="item-title"><a href="../../../../2017/11/21/kiwoom-method/" class="title">Kiwoom method</a></p>
+                            <p class="item-date"><time datetime="2017-11-21T06:30:28.545Z" itemprop="datePublished">2017-11-21</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/auto-trading-system/">Auto Trading System</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/howto/">HowTo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/">Software Development Process</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/software-development-process/test-driven-development/">Test-Driven Development</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/python/">python</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/11/">November 2017</a><span class="archive-list-count">7</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/api/">API</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/fid/">FID</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/howto/">HowTo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/postgres/">Postgres</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tdd/">TDD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/tr/">TR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/built-in-functions/">built-in functions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/django/">django</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/gunicorn/">gunicorn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/howto/">howto</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/kiwoom/">kiwoom</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/trading/">trading</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="../../../../tags/api/" style="font-size: 10px;">API</a> <a href="../../../../tags/fid/" style="font-size: 10px;">FID</a> <a href="../../../../tags/howto/" style="font-size: 10px;">HowTo</a> <a href="../../../../tags/postgres/" style="font-size: 10px;">Postgres</a> <a href="../../../../tags/tdd/" style="font-size: 10px;">TDD</a> <a href="../../../../tags/tr/" style="font-size: 10px;">TR</a> <a href="../../../../tags/built-in-functions/" style="font-size: 10px;">built-in functions</a> <a href="../../../../tags/django/" style="font-size: 10px;">django</a> <a href="../../../../tags/gunicorn/" style="font-size: 10px;">gunicorn</a> <a href="../../../../tags/howto/" style="font-size: 10px;">howto</a> <a href="../../../../tags/kiwoom/" style="font-size: 20px;">kiwoom</a> <a href="../../../../tags/nginx/" style="font-size: 10px;">nginx</a> <a href="../../../../tags/python/" style="font-size: 20px;">python</a> <a href="../../../../tags/trading/" style="font-size: 15px;">trading</a> <a href="../../../../tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://wikidocs.net/book/110">Python Trading</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="../../../../index.html" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 Hyogeun Kim</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'ultrasound-github-io';
+    
+    
+    var disqus_url = 'https://ultrasound.github.io2018/01/13/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="../../../../libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="../../../../libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="../../../../libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="../../../../js/main.js"></script>
+
+    </div>
+</body>
+</html>
